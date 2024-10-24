@@ -3,5 +3,5 @@ a:active,
 a:hover {
   outline: none;
   text-decoration: none;
-  transition: 0.3s;
+  transition: var(--transition);
 }

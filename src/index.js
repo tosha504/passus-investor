@@ -11,6 +11,27 @@
     body.toggleClass("fixed-page");
   });
 
+
+  if (jQuery(window).width() < 992) {
+    footerAccordionMenu()
+  }
+
+  function footerAccordionMenu() {
+    jQuery('.footer__investor h6').on('click', function (e) {
+      jQuery(e.target).siblings('.footer__investor_items').slideToggle(500)
+      if (jQuery(e.target).parent().children().siblings('.footer__investor_items').css('display') == 'block') {
+        jQuery(e.target).parent().siblings().children('.footer__investor_items').slideUp(500)
+        jQuery(e.target).parent().siblings().removeClass('active')
+      }
+
+      if (!jQuery(e.target).parent().hasClass('active')) {
+        jQuery(e.target).parent().addClass('active')
+      } else {
+        jQuery(e.target).parent().removeClass('active')
+      }
+    })
+  }
+
   setTimeout(function () {
     if (getCookie('popupCookie') != 'submited') {
       jQuery('.cookies').css("display", "block").hide().fadeIn(2000);

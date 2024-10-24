@@ -1,0 +1,180 @@
+@use "./__breakpoints" as b;
+@use "sass:map";
+.footer {
+  background: rgb(246, 244, 242);
+  background: linear-gradient(
+    180deg,
+    rgba(246, 244, 242, 1) 0%,
+    rgba(246, 244, 242, 1) 75%,
+    rgba(240, 185, 205, 1) 100%
+  );
+  padding: 64px 0;
+  p,
+  a {
+    font-size: clamp(16px, 3vw, 14px);
+    line-height: 22.4px;
+  }
+
+  .container {
+    color: var(--passu-dark-grey);
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    h6 {
+      color: var(--black);
+      font-size: 16px;
+    }
+  }
+
+  &__general {
+    flex: 1 1 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    @media (min-width: map.get(b.$grid-breakpoints, sm)) {
+      flex: 1 1 calc(50% - 50px);
+    }
+
+    @media (min-width: map.get(b.$grid-breakpoints, md)) {
+      flex: 0 1 calc(25% - 50px);
+    }
+
+    &_img {
+      flex: 1 1 100%;
+      img {
+        max-width: 80px;
+      }
+    }
+
+    &_addres,
+    &_contact {
+      flex: 1 1 calc((100% / 2) - 30px);
+
+      @media (min-width: map.get(b.$grid-breakpoints, md)) {
+        flex: 1 1 100%;
+      }
+    }
+  }
+  &__wrap-inwestor {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 100%;
+
+    @media (max-width: map.get(b.$grid-breakpoints, lg)) {
+      align-content: flex-start;
+      flex: 1 1 calc(70% - 50px);
+    }
+    @media (min-width: map.get(b.$grid-breakpoints, md)) {
+      flex: 1 1 calc(50% - 50px);
+    }
+
+    .footer__investor {
+      flex: 1 1 100%;
+      &.active {
+        h6 {
+          &::after {
+            transform: rotate(180deg);
+          }
+          padding: 12px 0 0 0;
+        }
+      }
+
+      @media (min-width: map.get(b.$grid-breakpoints, lg)) {
+        flex: 0 1 calc(100% / 4);
+      }
+      h6 {
+        padding: 12px 0;
+        display: flex;
+        @media (max-width: map.get(b.$grid-breakpoints, lg)) {
+          border-top: 1px solid #9f9797;
+
+          &::after {
+            content: "";
+            width: 15px;
+            height: 15px;
+            background-image: url(../assets/images/icons/shevron-black.svg);
+            background-size: 13px 7px;
+            vertical-align: middle;
+            margin-left: auto;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: inline-block;
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+            position: relative;
+          }
+        }
+      }
+
+      &_items {
+        display: none;
+        flex: 1 1 50%;
+        flex-wrap: wrap;
+        margin-top: 1em;
+        @media (min-width: map.get(b.$grid-breakpoints, lg)) {
+          display: flex;
+        }
+        a {
+          gap: 6px;
+          display: flex;
+          align-items: center;
+          padding: 8px 0;
+          flex: 1 1 100%;
+        }
+      }
+    }
+  }
+
+  &__investor,
+  &__general,
+  &__bottom {
+    a {
+      color: var(--passu-dark-grey);
+    }
+  }
+
+  &__bottom {
+    background-color: rgba(#fff, 0.5);
+    padding: 25px;
+    flex: 1 1 100%;
+    border-radius: 12px;
+
+    &,
+    &_polices {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      a {
+        flex: 1 1 100%;
+        @media (min-width: map.get(b.$grid-breakpoints, lg)) {
+          flex: 1 1 calc((100% / 3) - 10px);
+        }
+      }
+    }
+
+    &_rights,
+    &_polices {
+      color: var(--black);
+      flex: 1 1 100%;
+      @media (min-width: map.get(b.$grid-breakpoints, lg)) {
+        flex: 1 1 calc(100% / 2);
+      }
+    }
+
+    &_polices {
+      gap: 10px;
+    }
+
+    a {
+      padding: 8px 0;
+      font-size: 14px;
+      line-height: 22.4px;
+      color: var(--black);
+      @media (max-width: map.get(b.$grid-breakpoints, lg)) {
+        text-decoration: underline;
+      }
+    }
+  }
+}

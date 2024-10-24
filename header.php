@@ -28,7 +28,7 @@
 	<?php wp_body_open(); ?>
 	<div id="page" class="wrapper">
 
-		<header id="masthead" class="header">
+		<header id="masthead" class="header <?php echo is_front_page() ? 'dark' : 'light'; ?>">
 			<div class="container">
 				<?php
 				$logo = get_field('logo', 'options_header');
