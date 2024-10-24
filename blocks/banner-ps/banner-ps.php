@@ -30,7 +30,12 @@ $items = get_field('items'); ?>
       <ul class="banner-ps__items">
         <?php
         foreach ($items as $key => $item) { ?>
-          <li class="banner-ps__items_item"><?php echo my_custom_attachment_image($item['item']); ?></li>
+          <li class="banner-ps__items_item">
+            <?php
+            $descrpiton =  !empty($item['descrpiton']) ? "<p>{$item['descrpiton']}</p>" : "";
+            echo my_custom_attachment_image($item['item']) . $descrpiton;
+            ?>
+          </li>
         <?php } ?>
       </ul>
     <?php } ?>
