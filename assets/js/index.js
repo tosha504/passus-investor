@@ -52,6 +52,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
+/***/ "./gutenberg-styles/technology-partners-ps.scss":
+/*!******************************************************!*\
+  !*** ./gutenberg-styles/technology-partners-ps.scss ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9ndXRlbmJlcmctc3R5bGVzL3RlY2hub2xvZ3ktcGFydG5lcnMtcHMuc2NzcyIsIm1hcHBpbmdzIjoiO0FBQUEiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ndXRlbmJlcmctc3R5bGVzL3RlY2hub2xvZ3ktcGFydG5lcnMtcHMuc2Nzcz8xMjIzIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIGV4dHJhY3RlZCBieSBtaW5pLWNzcy1leHRyYWN0LXBsdWdpblxuZXhwb3J0IHt9OyJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./gutenberg-styles/technology-partners-ps.scss\n");
+
+/***/ }),
+
 /***/ "./sass/index.scss":
 /*!*************************!*\
   !*** ./sass/index.scss ***!
@@ -59,7 +70,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zYXNzL2luZGV4LnNjc3MiLCJtYXBwaW5ncyI6IjtBQUFBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc2Fzcy9pbmRleC5zY3NzP2I3OTIiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luXG5leHBvcnQge307Il0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./sass/index.scss\n");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zYXNzL2luZGV4LnNjc3MiLCJtYXBwaW5ncyI6IjtBQUFBIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc2Fzcy9pbmRleC5zY3NzPzcxNTMiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luXG5leHBvcnQge307Il0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./sass/index.scss\n");
 
 /***/ })
 
@@ -151,6 +162,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 		var installedChunks = {
 /******/ 			"/assets/js/index": 0,
 /******/ 			"src/index": 0,
+/******/ 			"css-blocks/technology-partners-ps": 0,
 /******/ 			"css-blocks/sldier-ps": 0,
 /******/ 			"css-blocks/runline-ps": 0,
 /******/ 			"css-blocks/banner-ps": 0
@@ -203,11 +215,12 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["src/index","css-blocks/sldier-ps","css-blocks/runline-ps","css-blocks/banner-ps"], () => (__webpack_require__("./src/index.js")))
-/******/ 	__webpack_require__.O(undefined, ["src/index","css-blocks/sldier-ps","css-blocks/runline-ps","css-blocks/banner-ps"], () => (__webpack_require__("./gutenberg-styles/banner-ps.scss")))
-/******/ 	__webpack_require__.O(undefined, ["src/index","css-blocks/sldier-ps","css-blocks/runline-ps","css-blocks/banner-ps"], () => (__webpack_require__("./gutenberg-styles/runline-ps.scss")))
-/******/ 	__webpack_require__.O(undefined, ["src/index","css-blocks/sldier-ps","css-blocks/runline-ps","css-blocks/banner-ps"], () => (__webpack_require__("./gutenberg-styles/sldier-ps.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["src/index","css-blocks/sldier-ps","css-blocks/runline-ps","css-blocks/banner-ps"], () => (__webpack_require__("./sass/index.scss")))
+/******/ 	__webpack_require__.O(undefined, ["src/index","css-blocks/technology-partners-ps","css-blocks/sldier-ps","css-blocks/runline-ps","css-blocks/banner-ps"], () => (__webpack_require__("./src/index.js")))
+/******/ 	__webpack_require__.O(undefined, ["src/index","css-blocks/technology-partners-ps","css-blocks/sldier-ps","css-blocks/runline-ps","css-blocks/banner-ps"], () => (__webpack_require__("./gutenberg-styles/banner-ps.scss")))
+/******/ 	__webpack_require__.O(undefined, ["src/index","css-blocks/technology-partners-ps","css-blocks/sldier-ps","css-blocks/runline-ps","css-blocks/banner-ps"], () => (__webpack_require__("./gutenberg-styles/runline-ps.scss")))
+/******/ 	__webpack_require__.O(undefined, ["src/index","css-blocks/technology-partners-ps","css-blocks/sldier-ps","css-blocks/runline-ps","css-blocks/banner-ps"], () => (__webpack_require__("./gutenberg-styles/sldier-ps.scss")))
+/******/ 	__webpack_require__.O(undefined, ["src/index","css-blocks/technology-partners-ps","css-blocks/sldier-ps","css-blocks/runline-ps","css-blocks/banner-ps"], () => (__webpack_require__("./gutenberg-styles/technology-partners-ps.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["src/index","css-blocks/technology-partners-ps","css-blocks/sldier-ps","css-blocks/runline-ps","css-blocks/banner-ps"], () => (__webpack_require__("./sass/index.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
