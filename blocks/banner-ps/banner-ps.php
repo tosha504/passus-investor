@@ -23,18 +23,25 @@ $text_title = get_field('text_title');
 $background =  !empty(get_field('background')) ? 'style="background-image: url(' . wp_get_attachment_url(get_field('background')) . ')"' : '';
 $items = get_field('items'); ?>
 <!-- Banner-ps start -->
-<section class="banner-ps" <?php echo $background; ?>>
+<section class="banner-ps"
+  <?php echo $background;
+  echo  $anchor; ?>>
   <div class="container">
     <?php if (!empty($items) && count($items) > 0) {
       show_title_and_btn($tag, $text_title); ?>
       <ul class="banner-ps__items">
         <?php
-        foreach ($items as $key => $item) { ?>
+        foreach ($items as $key => $item) {
+          $url = !empty($item["link"]['url']) ? $item["link"]['url'] : "#";
+        ?>
           <li class="banner-ps__items_item">
-            <?php
-            $descrpiton =  !empty($item['descrpiton']) ? "<p>{$item['descrpiton']}</p>" : "";
-            echo my_custom_attachment_image($item['item']) . $descrpiton;
-            ?>
+            <a href="<?php echo esc_url($url); ?>">
+              <?php
+              $descrpiton =  !empty($item['descrpiton']) ? "<p class='descrpiton'>{$item['descrpiton']}</p>" : "";
+              echo my_custom_attachment_image($item['item']) . $descrpiton;
+              ?>
+              <div class="long-description"> <?php echo $item['long_description']; ?></div>
+            </a>
           </li>
         <?php } ?>
       </ul>

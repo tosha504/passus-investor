@@ -9,7 +9,6 @@
   background-position: 30%;
   display: flex;
   align-items: center;
-  list-style: none;
   color: var(--white);
   @media (max-width: map.get(b.$grid-breakpoints, lg)) {
     padding-top: 100px;
@@ -31,32 +30,68 @@
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    list-style: none;
 
     @media (min-width: map.get(b.$grid-breakpoints, sm)) {
       justify-content: flex-start;
     }
     &_item {
       flex: 1 1 100%;
-      padding: clamp(30px, 5vw, 40px);
       border-radius: 16px;
       backdrop-filter: blur(25px);
       background-color: var(--blur-not-header);
+      transition: var(--transition);
       display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-
-      p {
-        font-size: clamp(16px, 3vw, 24px);
-        flex: 1 1 100%;
-        text-align: center;
-      }
+      min-height: 314px;
       @media (min-width: map.get(b.$grid-breakpoints, sm)) {
         flex: 0 1 calc((100% / 2) - 20px);
       }
       @media (min-width: map.get(b.$grid-breakpoints, lg)) {
         flex: 1 1 calc((100% / 3) - 20px);
         max-width: calc((100% / 3) - 20px);
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          background: rgba(#141313, 0.8);
+          img,
+          p.descrpiton {
+            visibility: hidden;
+            display: none;
+          }
+          .long-description {
+            p {
+              overflow: visible;
+              visibility: visible;
+              display: block;
+            }
+          }
+        }
+      }
+
+      a {
+        padding: clamp(30px, 3vw, 40px);
+        color: var(--white);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        p {
+          font-size: clamp(16px, 3vw, 24px);
+          flex: 1 1 100%;
+          text-align: center;
+        }
+      }
+      .long-description {
+        display: flex;
+        align-items: center;
+        p {
+          font-size: 16px;
+          overflow: hidden;
+          visibility: hidden;
+          display: none;
+        }
       }
     }
   }
