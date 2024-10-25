@@ -1,0 +1,8 @@
+@use "./_breakpoints" as b;
+@use "sass:map";
+section {
+  padding: 40px 0;
+  @media (min-width: map.get(b.$grid-breakpoints, md)) {
+    padding: 80px 0;
+  }
+}

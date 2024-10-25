@@ -15,9 +15,10 @@ body {
   height: 100%;
   width: 100%;
   position: relative;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: clamp(14px, 5vw, 16px);
   margin: 0;
-  color: var(--black);
+  color: var(--passu-dark-grey);
   font-family: var(--inter);
   line-height: 1.6;
   scroll-behavior: smooth;

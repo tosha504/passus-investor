@@ -1,0 +1,70 @@
+@use "../sass/components/__breakpoints" as b;
+@use "sass:map";
+@use "../sass/components/padding-section.scss";
+
+.runline-ps {
+  text-align: center;
+
+  &__description {
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    gap: 11px;
+    @media (min-width: map.get(b.$grid-breakpoints, md)) {
+      gap: 32px;
+      margin-top: 80px;
+    }
+    .item {
+      text-align: left;
+      flex: 1 1 calc(50% - 11px);
+      padding: 16px;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06),
+        0px 8px 24px -4px rgba(23, 23, 23, 0.08);
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      @media (min-width: map.get(b.$grid-breakpoints, md)) {
+        flex: 1 1 calc(25% - 32px);
+        padding: 40px;
+      }
+
+      &__from {
+        p {
+          font-weight: 500;
+          line-height: 1;
+          font-size: clamp(16px, 1vw, 24px);
+          span {
+            color: var(--black);
+            font-size: clamp(25px, 5vw, 80px);
+          }
+        }
+      }
+
+      &__services {
+        margin: 17px 0;
+        font-size: clamp(12px, 1vw, 18px);
+        font-weight: 700;
+        text-transform: uppercase;
+        color: var(--black);
+      }
+
+      .progress-line-full {
+        height: 12px;
+        width: 100%;
+        background-color: var(--grey5);
+        display: flex;
+        border-radius: 50px;
+        overflow: hidden;
+        .progress-line-curent {
+          background-color: var(--passus-red);
+          display: block;
+        }
+      }
+    }
+  }
+}

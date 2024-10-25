@@ -1,0 +1,8 @@
+@use "sass:map";
+@use "./_breakpoints" as b;
+.title-block-ps {
+  margin-bottom: 15px;
+  @media (min-width: map.get(b.$grid-breakpoints, md)) {
+    margin-bottom: 25px;
+  }
+}

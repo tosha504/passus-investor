@@ -28,7 +28,7 @@ $items = get_field('items'); ?>
   echo  $anchor; ?>>
   <div class="container">
     <?php if (!empty($items) && count($items) > 0) {
-      show_title_and_btn($tag, $text_title); ?>
+      show_title_and_btn($tag, $text_title, null, null); ?>
       <ul class="banner-ps__items">
         <?php
         foreach ($items as $key => $item) {

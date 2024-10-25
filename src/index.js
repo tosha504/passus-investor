@@ -31,16 +31,7 @@
       }
     })
   }
-  //slider slider-ps
-  jQuery(".slider-ps__slider").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: true,
-    arrows: true,
-    infinite: false,
-    swipe: true,
 
-  });
 
 
   setTimeout(function () {
