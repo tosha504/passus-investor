@@ -2,15 +2,16 @@
 @use "sass:map";
 
 .button {
-  border-radius: 8px;
-  color: black;
+  border-radius: 11px;
+  color: var(--white);
 
   &__primary {
     padding: 10px 20px;
+    background-color: var(--passus-red);
 
-    @media (max-width: map.get(b.$grid-breakpoints, lg)) {
+    @media (hover: hover) {
       &:hover {
-        color: black;
+        background-color: var(--passus-red-hover);
       }
     }
   }

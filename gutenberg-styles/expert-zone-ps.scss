@@ -1,0 +1,37 @@
+@use "../sass/components/__breakpoints" as b;
+@use "sass:map";
+@use "../sass/components/padding-section.scss";
+
+.expert-zone-ps {
+  text-align: center;
+
+  @for $i from 1 through 6 {
+    h#{7 - $i} {
+      text-align: center;
+      color: var(--white);
+    }
+  }
+
+  .container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-width: map.get(b.$grid-breakpoints, md)) {
+      border-radius: 12px;
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+  }
+
+  &__description {
+    color: var(--grey5);
+    max-width: 1000px;
+    margin: 16px auto;
+    @media (min-width: map.get(b.$grid-breakpoints, md)) {
+      margin: 32px auto;
+    }
+  }
+}

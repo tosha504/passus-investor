@@ -6,4 +6,12 @@
   @media (min-width: map.get(b.$grid-breakpoints, md)) {
     margin-bottom: 25px;
   }
+
+  &.big {
+    @for $i from 1 through 6 {
+      h#{7 - $i} {
+        font-size: clamp(25px, 5vw, 45px);
+      }
+    }
+  }
 }
