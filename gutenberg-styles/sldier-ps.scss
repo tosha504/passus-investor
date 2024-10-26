@@ -63,23 +63,11 @@
     .slick-arrow.slick-next {
       right: 24px;
       background-image: url(../assets/images/icons/arrow-slider-right.svg);
-
-      @media (hover: hover) {
-        &:hover {
-          background-position: 25px;
-        }
-      }
     }
 
     .slick-arrow.slick-prev {
       left: 24px;
       background-image: url(../assets/images/icons/arrow-slider-left.svg);
-
-      @media (hover: hover) {
-        &:hover {
-          background-position: 0px;
-        }
-      }
     }
 
     .slick-dots {
