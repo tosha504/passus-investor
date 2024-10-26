@@ -1,10 +1,11 @@
 {
     "/assets/js/index.js": "/assets/js/index.js",
-    "/css-blocks/sldier-ps.css": "/css-blocks/sldier-ps.css",
     "/css-blocks/runline-ps.css": "/css-blocks/runline-ps.css",
     "/css-blocks/invitations-ps.css": "/css-blocks/invitations-ps.css",
     "/css-blocks/expert-zone-ps.css": "/css-blocks/expert-zone-ps.css",
     "/css-blocks/banner-ps.css": "/css-blocks/banner-ps.css",
+    "/css-blocks/accordion-ps.css": "/css-blocks/accordion-ps.css",
     "/src/index.css": "/src/index.css",
-    "/css-blocks/technology-partners-ps.css": "/css-blocks/technology-partners-ps.css"
+    "/css-blocks/technology-partners-ps.css": "/css-blocks/technology-partners-ps.css",
+    "/css-blocks/sldier-ps.css": "/css-blocks/sldier-ps.css"
 }

@@ -1,0 +1,41 @@
+{
+  "name": "acf/accordion-ps",
+  "title": "Accordion PS",
+  "description": "A custom accordion-ps block.",
+  "style": [
+    "file:../../css-blocks/accordion-ps.css"
+  ],
+  "category": "custom-layout-category",
+  "icon": "admin-site",
+  "keywords": [
+    "about",
+    "quote"
+  ],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "accordion-ps.php"
+  },
+  "align": "full",
+  "supports": {
+    "anchor": true,
+    "alignContent": false,
+    "color": {
+      "text": true,
+      "background": true,
+      "link": true
+    },
+    "alignText": true,
+    "spacing": {
+      "margin": [
+        "top",
+        "bottom"
+      ],
+      "padding": true
+    },
+    "typography": {
+      "lineHeight": true,
+      "fontSize": true
+    },
+    "fullHeight": true
+  }
+}

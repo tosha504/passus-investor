@@ -1,0 +1,189 @@
+@use "../sass/components/__breakpoints" as b;
+@use "sass:map";
+
+.accordion-ps {
+  text-align: center;
+
+  &.white {
+    .accordion-ps {
+      &__items {
+        li {
+          background-color: var(--grey5);
+        }
+      }
+    }
+  }
+
+  &.black {
+    background-color: var(--black);
+    @for $i from 1 through 6 {
+      h#{7 - $i} {
+        color: var(--white);
+      }
+    }
+
+    .accordion-ps {
+      &__description {
+        color: var(--grey3);
+      }
+
+      &__items {
+        li {
+          background-color: #2b2929;
+          .question,
+          .answer {
+            p {
+              color: var(--white);
+            }
+          }
+          button {
+            div {
+              background-image: url(../assets/images/icons/shevron-white.svg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.pink {
+    background: linear-gradient(360deg, #f6f4f2, #f6f4f2 75%, #f0b9cd);
+
+    .accordion-ps {
+      &__items {
+        li {
+          background-color: var(--grey3);
+        }
+      }
+    }
+  }
+
+  &__description {
+    margin-bottom: 40px;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    @media (min-width: map.get(b.$grid-breakpoints, md)) {
+      margin: 0 auto 64px;
+    }
+  }
+
+  &__items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    li {
+      text-align: start;
+      border-radius: 12px;
+      span {
+        color: var(--red-theme);
+      }
+
+      .question {
+        padding: 24px;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 600;
+        align-items: start;
+        @media (min-width: map.get(b.$grid-breakpoints, md)) {
+          align-items: center;
+        }
+
+        @media (hover: hover) {
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        &.active {
+          p {
+            color: var(--passus-red);
+          }
+        }
+
+        p {
+          font-size: 18px;
+          font-weight: 500;
+          color: var(--black);
+          display: flex;
+          gap: 8px;
+          width: 100%;
+          @media (min-width: map.get(b.$grid-breakpoints, md)) {
+            align-items: center;
+            gap: 32px;
+            font-size: 24px;
+          }
+
+          &::before {
+            content: "";
+            max-width: 32px;
+            height: 32px;
+            width: 100%;
+            display: block;
+            background: url(../assets/images/accordion-element.png) no-repeat
+              center/cover;
+          }
+        }
+
+        button {
+          background: transparent;
+          border: 0;
+          position: relative;
+          transition: 0.3s;
+          border-radius: 2px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          div {
+            margin: 10px;
+            background-position: center;
+            background-size: 11px 19px;
+            background-repeat: no-repeat;
+            width: 20px;
+            height: 20px;
+            transition: 0.3s;
+            position: relative;
+            background-image: url(../assets/images/icons/shevron-grey.svg);
+          }
+
+          &.active {
+            filter: brightness(0) saturate(100%) invert(13%) sepia(88%)
+              saturate(4592%) hue-rotate(327deg) brightness(95%) contrast(103%);
+            div {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+
+      .answer {
+        margin-top: 20px;
+        display: none;
+        padding: 0 24px 24px;
+        @media (min-width: map.get(b.$grid-breakpoints, md)) {
+          padding: 0 63px 15px;
+        }
+        ul {
+          list-style: none;
+          li {
+            padding: 5px;
+            display: flex;
+            gap: 10px;
+            padding-right: 20px;
+
+            a {
+              color: var(--black);
+              @media (hover: hover) {
+                &:hover {
+                  color: var(--passus-red);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -41,6 +41,10 @@ function custom_block_theme_acf_enqueue_scripts()
 	if (has_block('acf/sldier-ps', get_queried_object_id())) {
 		wp_enqueue_script('sldier-ps', $theme_uri . "/blocks/sldier-ps/sldier-ps.js", array(), '1.0.0', true);
 	}
+
+	if (has_block('acf/accordion-ps', get_queried_object_id())) {
+		wp_enqueue_script('accordion-ps', $theme_uri . "/blocks/accordion-ps/accordion-ps.js", array(), '1.0.0', true);
+	}
 }
 add_action('wp_enqueue_scripts', 'custom_block_theme_acf_enqueue_scripts');
 add_action('admin_enqueue_scripts', 'custom_block_theme_acf_enqueue_scripts');
