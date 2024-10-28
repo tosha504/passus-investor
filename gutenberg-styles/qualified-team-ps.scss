@@ -14,7 +14,7 @@
     max-width: 1000px;
     margin: 16px auto;
     @media (min-width: map.get(b.$grid-breakpoints, md)) {
-      margin: 32px auto;
+      margin: 0 auto 64px;
     }
   }
 
@@ -39,9 +39,14 @@
       max-width: calc((100% / 2) - 12px);
       @media (min-width: map.get(b.$grid-breakpoints, md)) {
         gap: 40px;
-        flex: 1 1 calc((100% / 4) - 24px);
-        max-width: calc((100% / 4) - 24px);
+        flex: 1 1 calc((100% / 3) - 24px);
+        max-width: calc((100% / 3) - 24px);
         padding: 24px;
+      }
+
+      @media (min-width: map.get(b.$grid-breakpoints, lg)) {
+        max-width: calc((100% / 4) - 24px);
+        max-width: calc((100% / 4) - 24px);
       }
       &-descr {
         flex: 1 1 100%;
