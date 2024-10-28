@@ -14,4 +14,12 @@
       }
     }
   }
+
+  &.normal {
+    @for $i from 1 through 6 {
+      h#{7 - $i} {
+        font-size: clamp(20px, 5vw, 32px);
+      }
+    }
+  }
 }
