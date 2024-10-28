@@ -1,0 +1,39 @@
+@use "../sass/components/__breakpoints" as b;
+@use "sass:map";
+
+.bg-content-img-ps {
+  padding: 50px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center left;
+
+  @media (min-width: map.get(b.$grid-breakpoints, lg)) {
+    padding: 200px 0;
+  }
+
+  &,
+  .title-block-ps {
+    color: var(--white);
+  }
+
+  .container {
+    display: flex;
+    gap: 50px;
+    @media (max-width: map.get(b.$grid-breakpoints, sm)) {
+      gap: 24px;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__left {
+    flex: 1 1 100%;
+    max-width: 650px;
+  }
+
+  &__right {
+    flex: 1 1 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

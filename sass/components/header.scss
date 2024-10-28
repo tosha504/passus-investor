@@ -5,9 +5,7 @@
 
 .header {
   padding: 20px 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
+
   ul {
     list-style: none;
   }
@@ -60,6 +58,9 @@
   }
 
   &.dark {
+    position: absolute;
+    top: 0;
+    width: 100%;
     .header__nav {
       li {
         a {
