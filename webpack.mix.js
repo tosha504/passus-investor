@@ -20,11 +20,7 @@ scssFiles.forEach((file) => {
 });
 
 mix
-  .sass("sass/index.scss", "src", {
-    // Ensure options are compatible with the new API
-    implementation: require('sass'), // Explicitly specify Dart Sass
-  })
-  .sourceMaps()
+  .sass("sass/index.scss", "src")
   .options({
     processCssUrls: false,
     postCss: [
@@ -52,4 +48,3 @@ mix
     proxy: "http://integrator-passus.local/",
     files: [`**/*.php`, `**/*.js`, `**/*.css`],
   });
-

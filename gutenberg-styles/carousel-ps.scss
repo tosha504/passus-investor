@@ -1,0 +1,7 @@
+@use "../sass/components/__breakpoints" as b;
+@use "./_assets/slick.scss";
+@use "sass:map";
+
+.carousel-ps {
+  background-color: red;
+}
