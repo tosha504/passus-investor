@@ -63,6 +63,17 @@
       position: absolute;
       bottom: 25px;
       z-index: 2;
+      transition: 0.35s;
+      &.slick-disabled {
+        opacity: 0.3;
+        pointer-events: none;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
     .slick-prev {
       background-image: url(../assets/images/icons/carusel-next.svg);
@@ -79,6 +90,5 @@
         right: 24px;
       }
     }
-    //  slick-disabled
   }
 }
