@@ -45,6 +45,10 @@ function custom_block_theme_acf_enqueue_scripts()
 	if (has_block('acf/accordion-ps', get_queried_object_id())) {
 		wp_enqueue_script('accordion-ps', $theme_uri . "/blocks/accordion-ps/accordion-ps.js", array(), '1.0.0', true);
 	}
+
+	if (has_block('acf/carousel-ps', get_queried_object_id())) {
+		wp_enqueue_script('carousel-ps', $theme_uri . "/blocks/carousel-ps/carousel-ps.js", array(), '1.0.0', true);
+	}
 }
 add_action('wp_enqueue_scripts', 'custom_block_theme_acf_enqueue_scripts');
 add_action('admin_enqueue_scripts', 'custom_block_theme_acf_enqueue_scripts');

@@ -3,5 +3,82 @@
 @use "sass:map";
 
 .carousel-ps {
-  background-color: red;
+  background-color: var(--grey5);
+  .title-block-ps {
+    @for $i from 1 through 6 {
+      h#{7 - $i} {
+        text-align: center;
+      }
+    }
+  }
+
+  &__slider {
+    list-style: none;
+    padding-top: 25px;
+    padding-bottom: 100px;
+    &_item {
+      border-radius: 12px;
+      background-color: var(--white);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      font-weight: 500;
+      color: var(--black);
+      &::before {
+        content: "";
+        background: url(../assets/images/pointer.svg) no-repeat center/cover;
+        width: 36px;
+        height: 36px;
+      }
+
+      &:not(:last-child) {
+        @media (min-width: map.get(b.$grid-breakpoints, md)) {
+          margin-right: 12px;
+        }
+        @media (min-width: map.get(b.$grid-breakpoints, lg)) {
+          margin-right: 24px;
+        }
+      }
+    }
+
+    .slick-dots {
+      margin-top: 46px;
+      li {
+        background-color: var(--grey3);
+        &.slick-active {
+          background-color: var(--passus-black-grey);
+        }
+      }
+    }
+
+    .slick-arrow {
+      background-color: var(--white);
+      border: none;
+      width: 48px;
+      height: 48px;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 50px;
+      position: absolute;
+      bottom: 25px;
+      z-index: 2;
+    }
+    .slick-prev {
+      background-image: url(../assets/images/icons/carusel-next.svg);
+      right: 65px;
+      @media (min-width: map.get(b.$grid-breakpoints, lg)) {
+        right: 89px;
+      }
+    }
+
+    .slick-next {
+      background-image: url(../assets/images/icons/carusel-left.svg);
+      right: 0;
+      @media (min-width: map.get(b.$grid-breakpoints, lg)) {
+        right: 24px;
+      }
+    }
+    //  slick-disabled
+  }
 }
