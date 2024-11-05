@@ -6,12 +6,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center left;
-
+  color: var(--grey3);
   @media (min-width: map.get(b.$grid-breakpoints, lg)) {
     padding: 200px 0;
   }
 
-  &,
   .title-block-ps {
     color: var(--white);
   }

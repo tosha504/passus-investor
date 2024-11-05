@@ -1,9 +1,9 @@
 {
-  "name": "acf/bg-content-breadcrumbs-ps",
-  "title": "Tło nagłowek kontent breadcrumbs PS",
+  "name": "acf/bg-content-img-ps",
+  "title": "Tło nagłowek kontent obrazek PS",
   "description": "A custom recordings block.",
   "style": [
-    "file:../../css-blocks/bg-content-breadcrumbs-ps.css"
+    "file:../../css-blocks/bg-content-img-ps.css"
   ],
   "category": "custom-layout-category",
   "icon": "admin-site",
@@ -13,7 +13,7 @@
   ],
   "acf": {
     "mode": "edit",
-    "renderTemplate": "bg-content-breadcrumbs-ps.php"
+    "renderTemplate": "bg-content-img-ps.php"
   },
   "align": "full",
   "supports": {
