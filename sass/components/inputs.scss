@@ -29,4 +29,8 @@ textarea {
   &:focus {
     background-color: var(--white);
   }
+
+  &.wpcf7-not-valid {
+    border-color: var(--passus-red);
+  }
 }

@@ -14,5 +14,6 @@
     "/css-blocks/runline-ps.css": "/css-blocks/runline-ps.css",
     "/css-blocks/recordings-ps.css": "/css-blocks/recordings-ps.css",
     "/css-blocks/qualified-team-ps.css": "/css-blocks/qualified-team-ps.css",
-    "/css-blocks/invitations-ps.css": "/css-blocks/invitations-ps.css"
+    "/css-blocks/invitations-ps.css": "/css-blocks/invitations-ps.css",
+    "/css-blocks/form-content-ps.css": "/css-blocks/form-content-ps.css"
 }
