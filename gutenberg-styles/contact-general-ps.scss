@@ -1,0 +1,57 @@
+@use "../sass/components/__breakpoints" as b;
+@use "sass:map";
+
+.kontak-general-ps {
+  padding: 45px 0;
+  color: var((--black));
+  @media (min-width: map.get(b.$grid-breakpoints, md)) {
+    padding: 90px 0;
+  }
+
+  &__items {
+    display: flex;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      padding: 20px 0;
+      position: relative;
+
+      &:before {
+        content: "";
+        display: block;
+        width: 81px;
+        height: 8px;
+        border-radius: 12px;
+        background: var(--passus-red);
+        position: absolute;
+        top: -8px;
+        left: 0;
+      }
+    }
+
+    &_item {
+      flex: 1 1 100%;
+
+      @media (min-width: map.get(b.$grid-breakpoints, md)) {
+        flex: 1 1 calc((100% / 3) - 50px);
+      }
+
+      &-content {
+        font-weight: 400;
+        a {
+          color: var(--passus-red);
+          @media (hover: hover) {
+            &:hover {
+              color: var(--passus-red-hover);
+            }
+          }
+        }
+      }
+    }
+  }
+}
