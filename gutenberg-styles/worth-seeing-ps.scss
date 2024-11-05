@@ -66,6 +66,27 @@
         font-size: clamp(18px, 2vw, 32px);
         color: var(--black);
       }
+
+      &__play {
+        margin-top: auto;
+
+        .button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          max-width: 135px;
+
+          &::before {
+            content: "";
+            background: url(../assets/images/play-btn.svg) no-repeat
+              center/cover;
+            width: 12px;
+            height: 15px;
+            display: block;
+          }
+        }
+      }
     }
   }
 }

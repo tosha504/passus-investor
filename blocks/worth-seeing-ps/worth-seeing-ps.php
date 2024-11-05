@@ -45,6 +45,9 @@ $items = get_field('items'); ?>
               <div class="item__description">
                 <?php echo $item['description']; ?>
               </div>
+              <div class="item__play">
+                <a href="#" class="button button__primary" aria-label="Play wideo">Obejrzyj</a>
+              </div>
             </div>
           </li>
         <?php } ?>
