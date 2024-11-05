@@ -27,6 +27,15 @@
 
   //__mobile
   &__nav {
+    [aria-current] {
+      color: var(--passus-red) !important;
+
+      @media (hover: hover) {
+        &:hover {
+          color: var(--black);
+        }
+      }
+    }
     @media (max-width: map.get(b.$grid-breakpoints, xl)) {
       background: rgb(255, 255, 255);
       background: linear-gradient(
