@@ -1,0 +1,83 @@
+@use "sass:map";
+@use "../components/_breakpoints" as b;
+body {
+  &.post-type-archive-partners_tnl {
+    .partners-tnl {
+      padding: 32px 0;
+      @media (min-width: map.get(b.$grid-breakpoints, lg)) {
+        padding: 64px 0px;
+      }
+
+      &__banners {
+        padding: 100px 0;
+        background-image: url(../assets/images/banner.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        // background-position: center;
+      }
+
+      &__partners {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 64px 32px;
+
+        .partner {
+          border-radius: 12px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          border: 1px solid var(--grey3);
+          flex: 1 1 100%;
+          max-width: calc((100% / 3) - 32px);
+          padding: 24px;
+          transition: 0.35s;
+          @media (min-width: map.get(b.$grid-breakpoints, lg)) {
+          }
+
+          @media (hover: hover) {
+            &:hover {
+              box-shadow: 8px 8px 24px -4px rgba(23, 23, 23, 0.08);
+              border: 1px solid transparent;
+            }
+          }
+
+          &__excerpt {
+            margin: 12px 0 32px;
+          }
+
+          a {
+            color: var(--black);
+            margin-right: auto;
+            margin-top: auto;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            &::after {
+              content: "";
+              width: 20px;
+              height: 20px;
+              display: block;
+              background-image: url(../assets/images/icons/arrow-black.svg);
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: 8px 18px;
+            }
+
+            @media (hover: hover) {
+              &:hover {
+                color: var(--passus-red);
+                &::after {
+                  filter: brightness(0) saturate(100%) invert(13%) sepia(88%)
+                    saturate(4592%) hue-rotate(327deg) brightness(95%)
+                    contrast(103%);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
