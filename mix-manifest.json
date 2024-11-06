@@ -1,6 +1,6 @@
 {
     "/assets/js/index.js": "/assets/js/index.js",
-    "/css-blocks/carousel-ps.css": "/css-blocks/carousel-ps.css",
+    "/css-blocks/bg-content-newsletter-ps.css": "/css-blocks/bg-content-newsletter-ps.css",
     "/css-blocks/bg-content-img-ps.css": "/css-blocks/bg-content-img-ps.css",
     "/css-blocks/bg-content-breadcrumbs-ps.css": "/css-blocks/bg-content-breadcrumbs-ps.css",
     "/css-blocks/banner-ps.css": "/css-blocks/banner-ps.css",
@@ -17,6 +17,7 @@
     "/css-blocks/invitations-ps.css": "/css-blocks/invitations-ps.css",
     "/css-blocks/form-content-ps.css": "/css-blocks/form-content-ps.css",
     "/css-blocks/expert-zone-ps.css": "/css-blocks/expert-zone-ps.css",
+    "/css-blocks/contact-general-ps.css": "/css-blocks/contact-general-ps.css",
     "/css-blocks/conferences-webinars-ps.css": "/css-blocks/conferences-webinars-ps.css",
-    "/css-blocks/contact-general-ps.css": "/css-blocks/contact-general-ps.css"
+    "/css-blocks/carousel-ps.css": "/css-blocks/carousel-ps.css"
 }
