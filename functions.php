@@ -155,7 +155,9 @@ $realestate_includes = array(
 	'/template-tags.php',		// 	Custom template tags for this theme.
 	'/template-functions.php',	//	Functions which enhance the theme by hooking into WordPress.
 	'/acf-block-register.php',
-	'/install-plugin-formthis-theme.php'
+	'/install-plugin-formthis-theme.php',
+	'/custom-post-types.php'
+
 );
 
 // Load WooCommerce functions if WooCommerce is activated.
