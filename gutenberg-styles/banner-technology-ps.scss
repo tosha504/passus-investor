@@ -29,6 +29,14 @@
     align-items: center;
     max-width: 616px;
     border-radius: 12px;
-    border: 1px solid var(--grey5);
+    border: 2px solid var(--grey5);
+  }
+
+  &__right {
+    & > p {
+      &:first-of-type {
+        color: var(--black);
+      }
+    }
   }
 }

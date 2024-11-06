@@ -15,6 +15,7 @@ function register_post_types()
     'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
     'rewrite' => array('slug' => 'partnerzy'),
     'show_in_rest' => true,
+    'has_archive' => true,
     'menu_icon' => 'dashicons-universal-access',
   ));
 }
