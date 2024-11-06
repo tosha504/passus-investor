@@ -25,6 +25,19 @@
   }
   &__left {
     flex: 1 1 100%;
+    &_description {
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        li {
+          margin-left: 20px;
+          &::marker {
+            color: var(--passus-red);
+          }
+        }
+      }
+    }
   }
 
   &__newsletter {

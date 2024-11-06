@@ -22,7 +22,7 @@ $tag = get_field('tag');
 $text_title = get_field('text_title');
 $class_title = get_field('class_title');
 $font_weight = get_field('font-weight');
-$description = !empty(get_field('description')) ? "<div>" . get_field('description') . "</div>" : "";
+$description = !empty(get_field('description')) ? "<div class='bg-content-newsletter-ps__left_description'>" . get_field('description') . "</div>" : "";
 $background = get_field('background') ? 'style="background-image: url(' . wp_get_attachment_url(get_field('background')) . ')"' : '';;
 $shortcode_form = !empty(get_field('shortcode_form')) ? "<div class='bg-content-newsletter-ps__newsletter'>" . get_field('shortcode_form') . "</div>" : ""; ?>
 <!-- bg-content-newsletter-ps start -->
