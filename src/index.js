@@ -32,8 +32,6 @@
     })
   }
 
-
-
   setTimeout(function () {
     if (getCookie('popupCookie') != 'submited') {
       jQuery('.cookies').css("display", "block").hide().fadeIn(2000);

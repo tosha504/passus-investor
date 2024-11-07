@@ -3,15 +3,27 @@
 
 .button {
   border-radius: 11px;
-  color: var(--white);
+  padding: 10px 20px;
 
   &__primary {
-    padding: 10px 20px;
+    color: var(--white);
     background-color: var(--passus-red);
 
     @media (hover: hover) {
       &:hover {
         background-color: var(--passus-red-hover);
+      }
+    }
+  }
+
+  &__outline {
+    color: var(--black);
+    border: 1px solid var(--passus-grey);
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--passus-red);
+        border: 1px solid var(--passus-red);
       }
     }
   }
