@@ -34,7 +34,7 @@ $font_weight = get_field('font-weight'); ?>
         <div class="item-wrap">
           <p class="item-wrap__category">Cyberbezpieczeństwo</p>
           <p class="item-wrap__title">Reaktywne vs proaktywne podejście do cyberbezpieczeństwa</p>
-          <a href="#" class="button button__primary">Button</a>
+          <a href="#" class="button button__primary"><?php _e('Button', 'passus'); ?></a>
         </div>
       </li>
 
@@ -45,7 +45,7 @@ $font_weight = get_field('font-weight'); ?>
         <div class="item-wrap">
           <p class="item-wrap__category">Ciągłość działania IT</p>
           <p class="item-wrap__title">Reaktywne vs proaktywne podejście do cyberbezpieczeństwa</p>
-          <a href="#" class="button button__primary">Button</a>
+          <a href="#" class="button button__primary"><?php _e('Button', 'passus'); ?></a>
         </div>
       </li>
 
@@ -56,7 +56,7 @@ $font_weight = get_field('font-weight'); ?>
         <div class="item-wrap">
           <p class="item-wrap__category">Ciągłość działania IT</p>
           <p class="item-wrap__title">Reaktywne vs proaktywne podejście do cyberbezpieczeństwa </p>
-          <a href="#" class="button button__primary">Button</a>
+          <a href="#" class="button button__primary"><?php _e('Button', 'passus'); ?></a>
         </div>
       </li>
     </ul>

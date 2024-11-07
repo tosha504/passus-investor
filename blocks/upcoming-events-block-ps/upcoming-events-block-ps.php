@@ -30,19 +30,19 @@ $font_weight = get_field('font-weight'); ?>
       <li class="upcoming-events-ps__items_item">
         <p class="upcoming-events-ps__items_item-date">16.04.2024</p>
         <p class="upcoming-events-ps__items_item-title">IT Lunch – Wykorzystanie sztucznej inteligencji i uczenia maszynowego w zarządzaniu...</p>
-        <a href="#">Więcej </a>
+        <a href="#"><?php _e('Read more', 'passus'); ?></a>
       </li>
 
       <li class="upcoming-events-ps__items_item">
         <p class="upcoming-events-ps__items_item-date">15.05.2024</p>
         <p class="upcoming-events-ps__items_item-title"> Passus Summit 2024 </p>
-        <a href="#">Więcej </a>
+        <a href="#"><?php _e('Read more', 'passus'); ?></a>
       </li>
 
       <li class="upcoming-events-ps__items_item">
         <p class="upcoming-events-ps__items_item-date">30.08.2024</p>
         <p class="upcoming-events-ps__items_item-title">Konferencja KSC Forum Zakopane </p>
-        <a href="#">Więcej </a>
+        <a href="#"><?php _e('Read more', 'passus'); ?></a>
       </li>
     </ul>
   </div>

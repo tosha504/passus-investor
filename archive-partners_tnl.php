@@ -26,7 +26,7 @@ get_header();
 					echo '<li class="partners-tnl__partners_partner partner">';
 					echo !empty(get_the_post_thumbnail()) ? "<div class='partner__image'>" . get_the_post_thumbnail() . "</div>" : "";
 					echo  !empty(get_the_excerpt()) ? "<div class='partner__excerpt'>" . get_the_excerpt() . "</div>" : "";
-					echo "<a href=" . esc_url(get_the_permalink()) . ">Więcej</a>";
+					echo "<a href=" . esc_url(get_the_permalink()) . ">" . __('Read more', 'passus') . "</a>";
 					echo '</li>';
 				} ?>
 			</ul>
