@@ -1,19 +1,55 @@
 @use "sass:map";
 @use "../components/_breakpoints" as b;
 body {
-  &.post-type-archive-partners_tnl {
+  &.post-type-archive-partners_tnl,
+  &.tax-technologies {
     .partners-tnl {
-      padding: 32px 0;
+      padding: 0 0 32px;
       @media (min-width: map.get(b.$grid-breakpoints, lg)) {
-        padding: 64px 0px;
+        padding: 0 0 64px;
       }
 
       &__banners {
-        padding: 100px 0;
-        background-image: url(../assets/images/banner.png);
-        background-repeat: no-repeat;
-        background-size: contain;
+        padding: 85px 0;
+        // background-image: url(../assets/images/banner.png);
+        // background-repeat: no-repeat;
+        // background-size: contain;
         // background-position: center;
+
+        .container {
+          color: var(--black);
+          display: flex;
+          flex-direction: column;
+        }
+
+        h1,
+        .technologies-list {
+          margin: 0 auto;
+        }
+
+        .technologies-list {
+          margin-top: 32px;
+          display: flex;
+          list-style: none;
+          gap: 16px;
+
+          li {
+            a {
+              border-radius: 11px;
+              color: var(--black);
+              padding: 10px 20px;
+              border: 1px solid var(--passus-grey);
+            }
+
+            &.active {
+              a {
+                border: 1px solid transparent;
+                color: var(--white);
+                background-color: var(--passus-red);
+              }
+            }
+          }
+        }
       }
 
       &__partners {
@@ -76,6 +112,18 @@ body {
               }
             }
           }
+        }
+      }
+
+      .load-more-container {
+        margin-top: 64px;
+        display: flex;
+        a {
+          margin: 0 auto;
+          border-radius: 11px;
+          color: var(--black);
+          padding: 10px 20px;
+          border: 1px solid var(--passus-grey);
         }
       }
     }

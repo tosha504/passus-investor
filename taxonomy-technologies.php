@@ -8,13 +8,19 @@
  * @package start
  */
 
-get_header();
-?>
+get_header(); ?>
 
 <main id="primary" class="site-main partners-tnl">
 	<div class="partners-tnl__banners">
 		<div class="container">
-			<?php echo "<h1>" . post_type_archive_title('', false) . "</h1>";
+			<?php
+			if (is_post_type_archive()) {
+				echo "<h1>" . post_type_archive_title('', false) . "</h1>";
+			}
+
+			if (is_tax()) {
+				echo "<h1>" . single_term_title('', false) . "</h1>";
+			}
 			display_all_technologies();
 			?>
 		</div>
@@ -38,7 +44,9 @@ get_header();
 			wp_reset_postdata();
 		} else {
 			get_template_part('template-parts/content', 'none');
-		} ?>
+		}
+?>
+
 </main><!-- #main -->
 
 <?php
