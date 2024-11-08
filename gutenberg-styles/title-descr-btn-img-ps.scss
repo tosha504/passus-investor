@@ -1,0 +1,27 @@
+@use "../sass/components/__breakpoints" as b;
+@use "sass:map";
+
+.title-descr-btn-img-ps {
+  text-align: center;
+  &__description {
+    max-width: 1000px;
+    margin: 16px auto 32px;
+    @media (min-width: map.get(b.$grid-breakpoints, md)) {
+      margin: 24px auto 64px;
+    }
+  }
+
+  &__button-wrap {
+    margin: 32px 0;
+  }
+
+  img {
+    &.attachment-full {
+      border-radius: 12px;
+      margin-top: 22px;
+      @media (min-width: map.get(b.$grid-breakpoints, md)) {
+        margin-top: 52px;
+      }
+    }
+  }
+}
