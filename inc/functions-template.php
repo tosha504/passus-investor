@@ -68,12 +68,10 @@ function partner_tnl_card()
   <li class="partners-tnl__partners_partner partner">
     <?php if (get_the_post_thumbnail()) { ?>
       <div class="partner__image"><?php the_post_thumbnail(); ?></div>
-    <?php  } ?>
-
-    <?php if (get_the_excerpt()) { ?>
+    <?php  }
+    if (get_the_excerpt()) { ?>
       <div class="partner__excerpt"><?php the_excerpt(); ?></div>
     <?php  } ?>
-
     <a href="<?php echo esc_url(get_the_permalink()); ?>">
       <?php _e('Read more', 'passus'); ?>
     </a>
