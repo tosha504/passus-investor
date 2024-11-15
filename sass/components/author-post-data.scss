@@ -1,0 +1,65 @@
+@use "./__breakpoints" as b;
+@use "sass:map";
+.author-post-data {
+  padding: 48px 0;
+  gap: 16px;
+  flex-wrap: wrap;
+  &,
+  &__socials,
+  &__icon {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    justify-content: center;
+    border-radius: 50px;
+    overflow: hidden;
+  }
+
+  &__data {
+    max-width: 270px;
+    p {
+      font-size: 14px;
+    }
+
+    &_position {
+      color: var(--passus-dark-grey);
+      // color: var(--grey);
+    }
+  }
+
+  &__socials {
+    gap: 8px;
+    @media (min-width: map.get(b.$grid-breakpoints, md)) {
+      margin-left: auto;
+    }
+    &_social {
+      background-color: var(--grey5);
+      padding: 2px;
+      border-radius: 50px;
+      a {
+        max-width: 100%;
+        height: 32px;
+        width: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          transition: 0.25s;
+        }
+
+        @media (hover: hover) {
+          &:hover {
+            img {
+              filter: brightness(0) saturate(100%) invert(15%) sepia(84%)
+                saturate(5168%) hue-rotate(328deg) brightness(84%)
+                contrast(110%);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,10 +1,45 @@
 @use "sass:map";
 @use "../components/_breakpoints" as b;
-
+@use "../components/author-post-data";
 body {
   &.single-post {
-    .container {
-      max-width: 700px;
+    article {
+      padding: 50px 0;
+      color: var(--black);
+      .container {
+        max-width: 700px;
+
+        .attributes-tnl {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          margin-bottom: 20px;
+
+          .date {
+            padding: 4px 12px;
+            border-radius: 8px;
+            background-color: var(--grey5);
+          }
+        }
+
+        .entry-content {
+          border-bottom: 2px solid var(--grey5);
+          padding-bottom: 40px;
+          @media (min-width: map.get(b.$grid-breakpoints, md)) {
+            padding-bottom: 80px;
+          }
+          > * {
+            padding: 7px 0;
+            @media (min-width: map.get(b.$grid-breakpoints, md)) {
+              padding: 14px 0;
+            }
+          }
+
+          a {
+            color: var(--passus-red);
+          }
+        }
+      }
     }
   }
 }

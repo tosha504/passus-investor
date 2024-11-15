@@ -48,7 +48,6 @@ function display_all_technologies()
   }
 }
 
-
 function load_more_partners_btn($wp_query)
 {
   $max_pages = $wp_query->max_num_pages;
@@ -61,7 +60,6 @@ function load_more_partners_btn($wp_query)
   <?php
   }
 }
-
 
 function partner_tnl_card()
 { ?>
@@ -77,3 +75,58 @@ function partner_tnl_card()
     </a>
   </li>
 <?php }
+
+function author_post_block($author_icon, $author_name, $author_position, $social_media)
+{
+  // var_dump($author_icon, $author_name, $author_position, $social_media)
+
+?>
+  <div class="author-post-data">
+    <?php if (!empty($author_icon)) { ?>
+      <div class="author-post-data__icon">
+        <?php echo my_custom_attachment_image($author_icon); ?>
+      </div>
+    <?php }
+    if (!empty($author_name) || !empty($author_position)) { ?>
+      <div class="author-post-data__data">
+        <p class="author-post-data__data_name"><b>Autor:</b> <?php echo $author_name; ?></p>
+        <p class="author-post-data__data_position">
+          <?php echo $author_position ?>
+        </p>
+      </div>
+    <?php }
+    if (!empty($social_media) && count($social_media) > 0) { ?>
+      <div class="author-post-data__socials">
+        <?php foreach ($social_media as $key => $social) {
+          if ($social) {
+            $link_url = $social['link']['url'];
+            $link_target = $social['link']['target'] ? $social['link']['target'] : '_self'; ?>
+            <div class="author-post-data__socials_social">
+              <a class="" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo my_custom_attachment_image($social['icon']); ?></a>
+            </div>
+        <?php }
+        } ?>
+      </div>
+  </div>
+<?php  } ?>
+<?php }
+
+
+function get_reading_time($post_id = null)
+{
+  // Get the post content
+  $post_id = $post_id ?: get_the_ID();
+  $content = get_post_field('post_content', $post_id);
+
+  // Calculate word count
+  $word_count = str_word_count(strip_tags($content));
+
+  // Average reading speed in words per minute
+  $reading_speed = 200;
+
+  // Calculate time to read
+  $reading_time = ceil($word_count / $reading_speed);
+
+  // Return the time to read with a label
+  return $reading_time . ' minute' . ($reading_time > 1 ? 's' : '');
+}

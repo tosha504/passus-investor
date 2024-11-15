@@ -264,3 +264,21 @@ function fix_svg_thumb_display()
 		}
 	</style>';
 }
+
+add_filter('wpseo_breadcrumb_single_link_info', function ($link_info, $index) {
+	// Check if this is the last breadcrumb
+	if (isset($link_info['is_last']) && $link_info['is_last']) {
+		return null; // Return null to remove the last item
+	}
+	return $link_info;
+}, 10, 2);
+
+add_filter('wpseo_breadcrumb_links', function ($links) {
+	if (get_post_type() === 'post' &&  is_singular('post')) {
+		if ($links[2]) {
+			$links[2] = "";
+		}
+	}
+
+	return $links;
+});
