@@ -1,0 +1,41 @@
+{
+  "name": "acf/title-descr-beforeimg-ps",
+  "title": "Nagłowek kontent obrazek przed PS",
+  "description": "A custom recordings block.",
+  "style": [
+    "file:../../css-blocks/title-descr-beforeimg-ps.css"
+  ],
+  "category": "custom-layout-category",
+  "icon": "admin-site",
+  "keywords": [
+    "about",
+    "quote"
+  ],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "title-descr-beforeimg-ps.php"
+  },
+  "align": "full",
+  "supports": {
+    "anchor": true,
+    "alignContent": false,
+    "color": {
+      "text": true,
+      "background": true,
+      "link": true
+    },
+    "alignText": true,
+    "spacing": {
+      "margin": [
+        "top",
+        "bottom"
+      ],
+      "padding": true
+    },
+    "typography": {
+      "lineHeight": true,
+      "fontSize": true
+    },
+    "fullHeight": true
+  }
+}
