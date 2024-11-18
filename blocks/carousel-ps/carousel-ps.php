@@ -22,11 +22,21 @@ $tag = get_field('tag');
 $text_title = get_field('text_title');
 $class_title = get_field('class_title');
 $font_weight = get_field('font-weight');
-$items = get_field('items'); ?>
+$image_before = get_field('image_before');
+$description = !empty(get_field('description')) ? "<div class='carousel-ps__description'>" . get_field('description') . "</div>" : "";
+$items = get_field('items');
+$image_before_switch = get_field('image_before_switch');
+$image_before = get_field('image_before'); ?>
 <!-- carousel-ps start -->
 <section class="carousel-ps" <?php echo $anchor; ?>>
   <div class="container">
-    <?php show_title_and_btn($tag, $text_title, $class_title, $font_weight);
+    <?php if (!empty($image_before) &&  $image_before_switch === true) {
+      echo "<div class='carousel-ps__image-before'>";
+      echo my_custom_attachment_image($image_before);
+      echo "</div>";
+    }
+    show_title_and_btn($tag, $text_title, $class_title, $font_weight);
+    echo $description;
     if (!empty($items) && count($items) > 0) { ?>
       <ul class="carousel-ps__slider">
         <?php foreach ($items as $key => $item) { ?>
