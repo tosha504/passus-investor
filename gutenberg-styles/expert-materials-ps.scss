@@ -1,0 +1,106 @@
+@use "../sass/components/__breakpoints" as b;
+@use "sass:map";
+
+.expert-materials-ps {
+  text-align: center;
+
+  &__description {
+    margin-bottom: 40px;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    @media (min-width: map.get(b.$grid-breakpoints, md)) {
+      margin: 0 auto 64px;
+    }
+  }
+
+  &__materials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    @media (min-width: map.get(b.$grid-breakpoints, md)) {
+      gap: 32px;
+    }
+    .material {
+      text-align: left;
+      flex: 1 1 100%;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--grey3);
+      overflow: hidden;
+      border-radius: 12px;
+      @media (min-width: map.get(b.$grid-breakpoints, md)) {
+        max-width: calc(50% - 16px);
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          .material__image img {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      &__content,
+      &__image {
+        flex: 1 1 100%;
+      }
+      &__image {
+        display: flex;
+        overflow: hidden;
+
+        img {
+          transition: 0.35s;
+          object-fit: cover;
+        }
+      }
+
+      &__content {
+        padding: 24px;
+        flex-direction: column;
+        gap: 12px;
+        display: flex;
+        @media (min-width: map.get(b.$grid-breakpoints, md)) {
+          padding: 32px;
+          gap: 16px;
+        }
+
+        &_title {
+          a {
+            font-size: clamp(16px, 1vw, 20px);
+            color: var(--black);
+            font-weight: 700;
+
+            @media (hover: hover) {
+              &:hover {
+                color: var(--passus-red);
+              }
+            }
+          }
+        }
+
+        &_author {
+          margin-top: auto;
+          align-items: center;
+          display: flex;
+          gap: 16px;
+
+          &-icon {
+            border-radius: 50px;
+            overflow: hidden;
+            display: flex;
+          }
+
+          &-attr-name {
+            font-weight: 600;
+            color: var(--black);
+          }
+          .date {
+            padding: 4px 12px;
+            border-radius: 8px;
+            background-color: var(--grey5);
+          }
+        }
+      }
+    }
+  }
+}

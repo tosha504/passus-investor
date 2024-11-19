@@ -22,7 +22,6 @@
       @media (hover: hover) {
         &:hover {
           background-color: var(--blur);
-          cursor: pointer;
 
           &.menu-item-has-children {
             a {
@@ -115,7 +114,7 @@
             content: "";
             width: 15px;
             height: 15px;
-            background-image: url(../assets/images/header/check.png);
+            background-image: url(../assets/images/check.png);
             background-size: 13px 7px;
             vertical-align: middle;
             margin-left: 3px;

@@ -13,11 +13,12 @@ $author_name = get_field('author_name');
 $author_position = get_field('author_position');
 $social_media = get_field('social_media');
 
-if (function_exists('yoast_breadcrumb')) {
-	echo '<div class="breadcrumbs-container container">';
-	yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
-	echo '</div>';
-} ?>
+// if (function_exists('yoast_breadcrumb')) {
+// 	echo '<div class="breadcrumbs-container container">';
+// 	yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
+// 	echo '</div>';
+// } 
+?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="container">
