@@ -18,6 +18,16 @@ function register_post_types()
     'has_archive' => true,
     'menu_icon' => 'dashicons-universal-access',
   ));
+
+  register_post_type('partners_tnl', array(
+    'label' => 'Partnerzy technologiczni',
+    'public' => true,
+    'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
+    'rewrite' => array('slug' => 'partnerzy'),
+    'show_in_rest' => true,
+    'has_archive' => true,
+    'menu_icon' => 'dashicons-universal-access',
+  ));
 }
 add_action('init', 'register_post_types');
 

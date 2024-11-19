@@ -76,6 +76,13 @@
           color: var(--white);
         }
 
+        &.menu-item-has-children {
+          a {
+            &::after {
+              background-image: url(../assets/images/check-light.png);
+            }
+          }
+        }
         @media (hover: hover) {
           &:hover {
             background-color: rgba(#fff, 0.1);
@@ -127,6 +134,13 @@
       li {
         a {
           color: var(--black);
+        }
+        &.menu-item-has-children {
+          a {
+            &::after {
+              background-image: url(../assets/images/check.png);
+            }
+          }
         }
         @media (hover: hover) {
           &:hover {
