@@ -77,10 +77,7 @@ function partner_tnl_card()
 <?php }
 
 function author_post_block($author_icon, $author_name, $author_position, $social_media)
-{
-  // var_dump($author_icon, $author_name, $author_position, $social_media)
-
-?>
+{ ?>
   <div class="author-post-data">
     <?php if (!empty($author_icon)) { ?>
       <div class="author-post-data__icon">
@@ -89,7 +86,7 @@ function author_post_block($author_icon, $author_name, $author_position, $social
     <?php }
     if (!empty($author_name) || !empty($author_position)) { ?>
       <div class="author-post-data__data">
-        <p class="author-post-data__data_name"><b>Autor:</b> <?php echo $author_name; ?></p>
+        <p class="author-post-data__data_name"><b><?php echo get_post_type() === 'webinar_tnl' ? 'Prowadzący' : 'Autor'; ?>:</b> <?php echo $author_name; ?></p>
         <p class="author-post-data__data_position">
           <?php echo $author_position ?>
         </p>

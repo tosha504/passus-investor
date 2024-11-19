@@ -1,13 +1,16 @@
 @use "sass:map";
 @use "../components/_breakpoints" as b;
 @use "../components/author-post-data";
+@use "../pages/single-webinar_tnl.scss";
+
 body {
-  &.single-post {
+  &.single-post,
+  &.single-webinar_tnl {
     article {
       padding: 50px 0;
       color: var(--black);
       .container {
-        max-width: 700px;
+        max-width: 768px;
 
         .attributes-tnl {
           display: flex;

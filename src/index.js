@@ -1,16 +1,41 @@
 (function () {
   console.log('ready');
   const burger = jQuery(".burger"),
+    body = jQuery('body'),
     burgerSpan = jQuery(".burger span"),
     nav = jQuery('.header__nav'),
-    body = jQuery('body');
+    modal = jQuery('#videoModal'),
+    openButton = jQuery('.open-video'),
+    closeButton = jQuery('.close'),
+    videoIframe = jQuery('#videoIframe');
 
   burger.on("click", function () {
     burgerSpan.toggleClass("active");
     nav.toggleClass("active");
     body.toggleClass("fixed-page");
   });
+  //Video
+  console.log(openButton);
+  openButton.on("click", function () {
+    const videoUrl = jQuery(this).attr('data-video-url');
+    videoIframe.attr('src', videoUrl);
+    modal.css('display', 'block');
+    body.toggleClass("fixed-page");
+  });
 
+  closeButton.on("click", function () {
+    modal.css('display', 'none');
+    videoIframe.attr('src', ''); // Stop the video when the modal is closed
+    body.toggleClass("fixed-page");
+  });
+
+  window.onclick = function (event) {
+    if (event.target.id === 'videoModal') {
+      modal.css('display', 'none');
+      body.removeClass("fixed-page");
+      videoIframe.src = ''; // Stop the video when clicking outside the modal
+    }
+  };
 
   if (jQuery(window).width() < 992) {
     footerAccordionMenu()
