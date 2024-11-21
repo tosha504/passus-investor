@@ -39,7 +39,9 @@ $accordion = get_field('accordion'); ?>
             <div class="question">
               <p>
                 <span><?php echo $tab['title']; ?></span>
-                <a class="button button__primary" href="https://www.youtube.com/">Data Sheet</a>
+                <?php if (!empty($tab['data_sheet_link'])) { ?>
+                  <a class="button button__primary" href="<?php echo esc_url($tab['data_sheet_link']['url']); ?>"><?php echo $tab['data_sheet_link']['title']; ?></a>
+                <?php } ?>
               </p>
               <button aria-label="Toggle Accordion Content">
                 <div></div>

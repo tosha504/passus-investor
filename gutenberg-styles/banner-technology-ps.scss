@@ -5,7 +5,7 @@
   .container {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     gap: 22px;
     @media (min-width: map.get(b.$grid-breakpoints, lg)) {
       gap: 80px;
