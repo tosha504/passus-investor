@@ -33,7 +33,7 @@ function register_post_types()
     'label' => 'Data Sheet',
     'public' => true,
     'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
-    'rewrite' => array('slug' => 'webinarium'),
+    'rewrite' => array('slug' => 'datesheet'),
     'show_in_rest' => true,
     'has_archive' => false,
     'menu_icon' => 'dashicons-media-spreadsheet',
