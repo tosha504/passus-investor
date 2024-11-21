@@ -28,6 +28,16 @@ function register_post_types()
     'has_archive' => false,
     'menu_icon' => 'dashicons-format-video',
   ));
+
+  register_post_type('datesheet_tnl', array(
+    'label' => 'Data Sheet',
+    'public' => true,
+    'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
+    'rewrite' => array('slug' => 'webinarium'),
+    'show_in_rest' => true,
+    'has_archive' => false,
+    'menu_icon' => 'dashicons-media-spreadsheet',
+  ));
 }
 add_action('init', 'register_post_types');
 
