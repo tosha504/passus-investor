@@ -32,15 +32,14 @@ $accordion = get_field('accordion'); ?>
     <?php
     show_title_and_btn($tag, $text_title, $class_title, $font_weight);
     echo  $description;
-    if (!empty($accordion) && count($accordion) > 0) {
-      // var_dump($accordion);
-    ?>
+    if (!empty($accordion) && count($accordion) > 0) { ?>
       <ul class="accordion-ps__items">
         <?php foreach ($accordion as $key => $tab) { ?>
           <li>
             <div class="question">
               <p>
-                <?php echo $tab['title']; ?>
+                <span><?php echo $tab['title']; ?></span>
+                <a class="button button__primary" href="https://www.youtube.com/">Data Sheet</a>
               </p>
               <button aria-label="Toggle Accordion Content">
                 <div></div>

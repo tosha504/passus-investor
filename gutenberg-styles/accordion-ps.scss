@@ -109,6 +109,22 @@
           display: flex;
           gap: 8px;
           width: 100%;
+          flex-wrap: wrap;
+          a {
+            font-size: clamp(14px, 1vw, 16px);
+          }
+          @media (max-width: map.get(b.$grid-breakpoints, md)) {
+            span {
+              flex: 1 1 30%;
+            }
+            a {
+              flex: 1 1 100%;
+              text-align: center;
+            }
+            &::before {
+              flex: 1 1 10%;
+            }
+          }
           @media (min-width: map.get(b.$grid-breakpoints, md)) {
             align-items: center;
             gap: 32px;
