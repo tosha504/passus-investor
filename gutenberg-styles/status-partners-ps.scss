@@ -1,0 +1,49 @@
+@use "../sass/components/__breakpoints" as b;
+@use "sass:map";
+@use "../sass/components/padding-section.scss";
+
+.status-partners-ps {
+  text-align: center;
+  background-color: var(--grey5);
+
+  &__description {
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    gap: 10px;
+    @media (min-width: map.get(b.$grid-breakpoints, md)) {
+      gap: 24px;
+      margin-top: 80px;
+    }
+    .item {
+      text-align: left;
+      background-color: var(--white);
+      flex: 1 1 calc(50% - 11px);
+      padding: 16px;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.06),
+        0px 8px 24px -4px rgba(23, 23, 23, 0.08);
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @media (min-width: map.get(b.$grid-breakpoints, md)) {
+        flex: 1 1 calc(25% - 32px);
+        padding: 40px;
+      }
+
+      p {
+        text-align: center;
+        margin-top: 16px;
+        font-size: 15px;
+        @media (min-width: map.get(b.$grid-breakpoints, md)) {
+          margin-top: 32px;
+        }
+      }
+    }
+  }
+}
