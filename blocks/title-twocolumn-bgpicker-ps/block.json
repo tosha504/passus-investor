@@ -1,0 +1,41 @@
+{
+  "name": "acf/title-twocolumn-bgpicker-ps",
+  "title": "Nagłowek dwie kuluny wybór koloru  PS",
+  "description": "A custom title twocolumn bgpicker block.",
+  "style": [
+    "file:../../css-blocks/title-twocolumn-bgpicker-ps.css"
+  ],
+  "category": "custom-layout-category",
+  "icon": "admin-site",
+  "keywords": [
+    "about",
+    "quote"
+  ],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "title-twocolumn-bgpicker-ps.php"
+  },
+  "align": "full",
+  "supports": {
+    "anchor": true,
+    "alignContent": false,
+    "color": {
+      "text": true,
+      "background": true,
+      "link": true
+    },
+    "alignText": true,
+    "spacing": {
+      "margin": [
+        "top",
+        "bottom"
+      ],
+      "padding": true
+    },
+    "typography": {
+      "lineHeight": true,
+      "fontSize": true
+    },
+    "fullHeight": true
+  }
+}
