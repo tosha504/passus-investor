@@ -2,6 +2,23 @@
 @use "sass:map";
 
 .title-twocolumn-bgpicker-ps {
+  &.black {
+    background: var(--black);
+
+    &,
+    .reward,
+    .title-block-ps {
+      color: var(--white);
+    }
+  }
+
+  &.grey {
+    background: var(--grey5);
+  }
+
+  &.white {
+    background: var(--white);
+  }
   .title-block-ps {
     max-width: 768px;
     text-align: center;

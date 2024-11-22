@@ -48,7 +48,13 @@
 
   &.pink {
     background: linear-gradient(360deg, #f6f4f2, #f6f4f2 75%, #f0b9cd);
+  }
 
+  &.grey {
+    background: var(--grey5);
+  }
+  &.pink,
+  &.grey {
     .accordion-ps {
       &__items {
         li {
