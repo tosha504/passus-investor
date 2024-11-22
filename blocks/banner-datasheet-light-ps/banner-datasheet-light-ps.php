@@ -22,7 +22,7 @@ if (!empty($block['anchor'])) {
 $description = get_field('description');
 $logo_partner = get_field('logo_partner');
 $title = !empty(get_field('title')) ? '<h1>' . get_field('title') . '</h1>' : '';
-$fake_title = get_field('fake_title'); ?>
+$fake_title =  !empty(get_field('fake_title')) ? '<p class="fake-title">' . get_field('fake_title') . '</p>' : ''; ?>
 <!-- banner-datasheet-light-ps start -->
 <section class="banner-datasheet-light-ps" <?php echo  $anchor; ?>>
   <?php
