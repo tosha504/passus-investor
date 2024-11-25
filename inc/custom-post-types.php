@@ -38,6 +38,16 @@ function register_post_types()
     'has_archive' => false,
     'menu_icon' => 'dashicons-media-spreadsheet',
   ));
+
+  register_post_type('events_tnl', array(
+    'label' => 'Wydarzenia',
+    'public' => true,
+    'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
+    'rewrite' => array('slug' => 'wydarzenia'),
+    'show_in_rest' => true,
+    'has_archive' => false,
+    'menu_icon' => 'dashicons-cloud-saved',
+  ));
 }
 add_action('init', 'register_post_types');
 

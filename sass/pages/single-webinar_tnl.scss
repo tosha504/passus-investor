@@ -3,12 +3,17 @@
 
 body {
   &.single-webinar_tnl {
-    ul {
-      li {
-        margin-left: 20px;
-        &::marker {
-          color: var(--passus-red);
+    article {
+      ul {
+        li {
+          margin-left: 20px;
+          &::marker {
+            color: var(--passus-red);
+          }
         }
+      }
+      a {
+        color: var(--passus-red);
       }
     }
     .webinar-tnl {

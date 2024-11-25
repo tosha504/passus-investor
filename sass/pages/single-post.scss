@@ -1,7 +1,8 @@
 @use "sass:map";
 @use "../components/_breakpoints" as b;
 @use "../components/author-post-data";
-@use "../pages/single-webinar_tnl.scss";
+@use "../pages/single-webinar_tnl";
+@use "../pages/single-events_tnl.scss";
 
 body {
   &.single-post,
