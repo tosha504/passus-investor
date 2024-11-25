@@ -1,0 +1,105 @@
+@use "../sass/components/__breakpoints" as b;
+@use "sass:map";
+
+.host-invited-ps {
+  background: var(--grey5);
+  ul {
+    list-style: none;
+    li {
+      margin-left: 0px !important;
+    }
+  }
+
+  h3 {
+    color: var(--black);
+    font-size: clamp(24px, 1vw, 32px);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    &::before {
+      content: "";
+      max-width: 32px;
+      max-height: 100%;
+      height: 32px;
+      width: 100%;
+    }
+    &.host {
+      &::before {
+        background: url(../assets/images/invited.svg) no-repeat center/cover;
+      }
+    }
+
+    &.invited {
+      &::before {
+        background: url(../assets/images/host.svg) no-repeat center/cover;
+      }
+    }
+  }
+
+  &__items {
+    padding: 50px 0;
+    gap: 50px;
+    flex-wrap: wrap;
+
+    &,
+    li {
+      display: flex;
+    }
+
+    .item {
+      flex: 1 100%;
+      align-items: center;
+      gap: 24px;
+      @media (max-width: map.get(b.$grid-breakpoints, sm)) {
+        flex-wrap: wrap;
+      }
+
+      @media (min-width: map.get(b.$grid-breakpoints, sm)) {
+        max-width: calc(50% - 25px);
+        gap: 32px;
+      }
+
+      &__image {
+        display: flex;
+        align-items: center;
+        max-width: 130px;
+        max-height: 130px;
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      &__data {
+        &_name,
+        &_descr {
+          color: var(--black);
+        }
+        &_name {
+          font-weight: 600;
+          font-size: clamp(16px, 1vw, 20px);
+        }
+        &_position {
+          font-weight: 500;
+          font-size: clamp(14px, 1vw, 16px);
+        }
+
+        &_descr {
+          margin: 16px 0 24px;
+          font-size: clamp(12px, 1vw, 14px);
+        }
+
+        &_social {
+          gap: 16px;
+          &,
+          a {
+            display: flex;
+          }
+
+          a {
+            max-width: 18px;
+            max-height: 18px;
+          }
+        }
+      }
+    }
+  }
+}
