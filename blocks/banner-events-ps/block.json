@@ -1,0 +1,41 @@
+{
+  "name": "acf/banner-events-ps",
+  "title": "Banner events PS",
+  "description": "A custom banner events block.",
+  "style": [
+    "file:../../css-blocks/banner-events-ps.css"
+  ],
+  "category": "custom-layout-category",
+  "icon": "admin-site",
+  "keywords": [
+    "about",
+    "quote"
+  ],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "banner-events-ps.php"
+  },
+  "align": "full",
+  "supports": {
+    "anchor": true,
+    "alignContent": false,
+    "color": {
+      "text": true,
+      "background": true,
+      "link": true
+    },
+    "alignText": true,
+    "spacing": {
+      "margin": [
+        "top",
+        "bottom"
+      ],
+      "padding": true
+    },
+    "typography": {
+      "lineHeight": true,
+      "fontSize": true
+    },
+    "fullHeight": true
+  }
+}
