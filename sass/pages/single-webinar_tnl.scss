@@ -15,6 +15,10 @@ body {
       a {
         color: var(--passus-red);
       }
+
+      .entry-content {
+        border-bottom: none !important;
+      }
     }
     .webinar-tnl {
       &__video-block {
