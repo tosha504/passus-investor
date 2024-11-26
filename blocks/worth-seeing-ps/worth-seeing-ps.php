@@ -29,24 +29,30 @@ $items = get_field('items'); ?>
     <?php show_title_and_btn($tag, $text_title, $class_title, $font_weight);
     if (!empty($items) && count($items) > 0) { ?>
       <ul class="worth-seeing-ps__items">
-        <?php foreach ($items as $key => $item) { ?>
+        <?php foreach ($items as $key => $item) {
+          $curent_id = $item->ID;
+          $timestamp = get_the_date('U');
+
+          $date_event = get_field('date_event', $curent_id);
+          $time = get_field('video_length', $curent_id);
+          $place = get_field('place', $curent_id); ?>
           <li class="worth-seeing-ps__items_item item">
             <div class="item__image">
-              <?php echo my_custom_attachment_image($item['image']); ?>
+              <?php echo my_custom_attachment_image(get_post_thumbnail_id($curent_id)); ?>
             </div>
             <div class="item__content">
               <div class="item__content_attr">
-                <p class="date"><?php echo $item['date']; ?></p>
-                <p class="time"><?php echo $item['time']; ?></p>
+                <p class="date"><?php echo date('d.m.Y', $timestamp); ?></p>
+                <p class="time"><?php echo $time; ?></p>
               </div>
               <p class="item__title">
-                <?php echo $item['title']; ?>
+                <?php echo $item->post_title; ?>
               </p>
               <div class="item__description">
-                <?php echo $item['description']; ?>
+                <?php echo $item->post_excerpt; ?>
               </div>
               <div class="item__play">
-                <a href="#" class="button button__primary" aria-label="Play wideo"><?php _e('Watch', 'passus'); ?></a>
+                <a class="button button__primary" href="<?php echo esc_url(get_permalink($curent_id)); ?>" aria-label="Subscribe to event"><?php _e('Watch', 'passus') ?></a>
               </div>
             </div>
           </li>
