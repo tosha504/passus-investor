@@ -31,9 +31,7 @@ $recordings = get_field('recordings'); ?>
       <ul class="recordings-ps__items">
         <?php foreach ($recordings as $key => $record) {
           $curent_id = $record->ID;
-          $categories = wp_get_post_terms($curent_id, 'categories_webinar');
-          // var_dump($categories[0]->name);
-        ?>
+          $categories = wp_get_post_terms($curent_id, 'categories_webinar'); ?>
           <li class="recordings-ps__items_item">
             <div class="recordings-ps__items_item-img">
               <?php echo  my_custom_attachment_image(get_post_thumbnail_id($curent_id)); ?>
@@ -44,8 +42,8 @@ $recordings = get_field('recordings'); ?>
                   echo $categories[0]->name;
                 }  ?></p>
 
-              <p class="item-wrap__title">Reaktywne vs proaktywne podejście do cyberbezpieczeństwa</p>
-              <a href="#" class="button button__primary"><?php _e('Button', 'passus'); ?></a>
+              <p class="item-wrap__title"><?php echo $record->post_title; ?></p>
+              <a href="<?php echo esc_url(get_permalink($curent_id)); ?>" class="button button__primary"><?php _e('Button', 'passus'); ?></a>
             </div>
           </li>
         <?php } ?>
