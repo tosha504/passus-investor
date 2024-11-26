@@ -15,6 +15,59 @@ body {
       a {
         color: var(--passus-red);
       }
+      .banner-events-ps {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center left;
+
+        &,
+        .title-block-ps {
+          color: var(--white);
+        }
+        .breadcrumbs-container {
+          margin-bottom: 45px;
+          #breadcrumbs {
+            display: inline-block;
+            background-color: #ffffff10;
+            border-radius: 8px;
+            padding: 5px 12px;
+            &,
+            a {
+              color: var(--white);
+            }
+            a {
+              @media (hover: hover) {
+                &:hover {
+                  color: var(--passus-red-hover);
+                }
+              }
+            }
+          }
+        }
+
+        .container {
+          &:not(:first-child) {
+            max-width: 950px;
+            margin: 0 auto;
+            text-align: center;
+          }
+        }
+
+        &__content {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          .title-block-ps {
+            margin-bottom: 0;
+          }
+
+          .button-wrap {
+            a {
+              color: var(--white);
+            }
+          }
+        }
+      }
     }
   }
 }
