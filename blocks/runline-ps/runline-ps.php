@@ -36,7 +36,7 @@ $number_of_projects = get_field('number_of_projects'); ?>
             <div class="item__from">
               <?php
               if (!empty($project['curent']) && !empty($project['from_top'])) {
-                echo '<p><span>' . $project['curent'] . '</span>' . __(' of the top ', 'passus') . $project['from_top'] . '</p>';
+                echo '<p><span>0</span>' . __(' of the top ', 'passus') . $project['from_top'] . '</p>';
               }
               ?>
             </div>
@@ -44,7 +44,7 @@ $number_of_projects = get_field('number_of_projects'); ?>
               echo '<p class="item__services">' . $project['services'] . '</p>';
             } ?>
             <div class="progress-line-full" data-full="<?php echo $project['from_top']; ?>">
-              <div class="progress-line-curent" data-current="<?php echo $project['curent']; ?>" style="width: <?php echo ($project['curent'] * 100) / $project['from_top']  ?>%"></div>
+              <div class="progress-line-curent" data-current="<?php echo $project['curent']; ?>" style="width: 0%;"></div>
             </div>
           </div>
         <?php } ?>
@@ -52,3 +52,13 @@ $number_of_projects = get_field('number_of_projects'); ?>
     <?php } ?>
   </div>
 </section><!-- runline-ps end -->
+<style>
+  .progress-line-curent {
+    transition: width 1s;
+    /* Default transition for smooth animation */
+    background-color: #4caf50;
+    /* Customize color */
+    height: 10px;
+    /* Customize height */
+  }
+</style>
