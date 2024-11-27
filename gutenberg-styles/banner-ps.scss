@@ -42,6 +42,7 @@
       background-color: var(--blur-not-header);
       transition: var(--transition);
       display: flex;
+      justify-content: center;
       min-height: 320px;
       @media (min-width: map.get(b.$grid-breakpoints, sm)) {
         flex: 0 1 calc((100% / 2) - 20px);
