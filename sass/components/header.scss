@@ -37,25 +37,27 @@
       }
     }
     @media (max-width: map.get(b.$grid-breakpoints, xl)) {
-      background: rgb(255, 255, 255);
+      background: rgba(246, 244, 242, 1);
       background: linear-gradient(
         180deg,
-        rgba(255, 255, 255, 1) 0%,
-        rgba(255, 255, 255, 1) 35%,
+        rgba(246, 244, 242, 1) 0%,
+        rgba(246, 244, 242, 1) 35%,
         rgba(242, 199, 213, 1) 100%
       );
-      padding: 50px;
+      padding: 75px 24px;
       position: fixed;
       left: -100%;
       top: 0;
       bottom: 0;
-      width: 80%;
-      z-index: 1000;
+      z-index: 5;
       flex-direction: column;
       align-items: start;
       overflow: auto;
       transition: all 0.5s;
-
+      width: 100%;
+      @media (min-width: map-get(b.$grid-breakpoints, sm)) {
+        padding: 50px;
+      }
       &.active {
         left: 0;
 
@@ -73,13 +75,21 @@
     .header__nav {
       li {
         a {
-          color: var(--white);
+          color: #000;
+          font-weight: 600;
+          @media (min-width: map-get(b.$grid-breakpoints, xl)) {
+            color: var(--white);
+          }
         }
 
         &.menu-item-has-children {
           a {
             &::after {
-              background-image: url(../assets/images/check-light.png);
+              background-image: url(../assets/images/check.png);
+
+              @media (min-width: map-get(b.$grid-breakpoints, xl)) {
+                background-image: url(../assets/images/check-light.png);
+              }
             }
           }
         }
@@ -106,7 +116,9 @@
 
         ul {
           &.sub-menu {
-            background-color: var(--grey5);
+            @media (min-width: map-get(b.$grid-breakpoints, xl)) {
+              background-color: var(--grey5);
+            }
             li {
               @media (hover: hover) {
                 &:hover {
@@ -165,7 +177,9 @@
 
         ul {
           &.sub-menu {
-            background-color: var(--grey5);
+            @media (min-width: map-get(b.$grid-breakpoints, xl)) {
+              background-color: var(--grey5);
+            }
             li {
               @media (hover: hover) {
                 &:hover {

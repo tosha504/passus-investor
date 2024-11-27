@@ -19,6 +19,22 @@
       transition: 0.35s;
       position: relative;
 
+      @media (max-width: map.get(b.$grid-breakpoints, xl)) {
+        width: 100%;
+        background-color: var(--white);
+        max-width: 400px;
+      }
+      &.menu-item-has-children {
+        a {
+          @media (max-width: map-get(b.$grid-breakpoints, xl)) {
+            display: flex;
+            align-items: center;
+            &::after {
+              margin-left: auto !important;
+            }
+          }
+        }
+      }
       @media (hover: hover) {
         &:hover {
           background-color: var(--blur);
@@ -44,7 +60,7 @@
       }
 
       ul {
-        display: flex !important;
+        display: flex;
         flex-direction: column;
         gap: 20px;
         align-items: flex-start;
@@ -53,8 +69,8 @@
           padding: 18px;
           border-radius: 8px;
           @media (min-width: map.get(b.$grid-breakpoints, xl)) {
-            display: block;
             position: absolute;
+            display: flex;
             z-index: 9;
             left: 0px;
             top: 50px;
@@ -81,7 +97,13 @@
       }
 
       &.grupa-passus {
-        margin-left: 120px;
+        background-color: transparent;
+        padding: 0;
+        margin-top: 12px;
+        @media (min-width: map.get(b.$grid-breakpoints, xl)) {
+          margin-top: 0;
+          margin-left: 120px;
+        }
         a {
           color: var(--white) !important;
           background-color: var(--passus-red);
@@ -98,6 +120,13 @@
     }
 
     .menu-item-has-children {
+      &.active {
+        a {
+          &:after {
+            transform: rotate(180deg);
+          }
+        }
+      }
       a {
         &:not(:last-child) {
           position: relative;

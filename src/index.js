@@ -14,8 +14,46 @@
     nav.toggleClass("active");
     body.toggleClass("fixed-page");
   });
+
+  function mobNavMenu() {
+    jQuery(".menu-item-has-children a").on("click", function (e) {
+
+      console.log(jQuery(e.target));
+      jQuery(e.target).siblings("ul .sub-menu").slideToggle(500);
+
+      if (
+        jQuery(e.target)
+          .parent()
+          .children()
+          .siblings("ul .sub-menu")
+          .css("display") == "block"
+      ) {
+        jQuery(e.target)
+          .parent()
+          .siblings()
+          .children("ul .sub-menu")
+          .slideUp(500);
+
+        jQuery(e.target)
+          .parent()
+          .siblings()
+          .children("a")
+          .removeClass("active");
+      }
+
+
+      if (!jQuery(this).parent().hasClass("active")) {
+        jQuery(this).parent().toggleClass("active");
+        jQuery(this).parent().siblings('.menu-item-has-children.active').toggleClass("active");
+      } else {
+        jQuery(this).parent().removeClass("active");
+      }
+    });
+  }
+  if (jQuery(window).width() < 1200) {
+    mobNavMenu();
+  }
   //Video
-  console.log(openButton);
   openButton.on("click", function () {
     const videoUrl = jQuery(this).attr('data-video-url');
     videoIframe.attr('src', videoUrl);
