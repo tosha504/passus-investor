@@ -1,0 +1,47 @@
+@use "../sass/components/__breakpoints" as b;
+@use "sass:map";
+@use "../sass/components/padding-section.scss";
+
+.featured-partners-ps {
+  text-align: center;
+  position: relative;
+  &::before,
+  &::after {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    max-width: 291px;
+
+    @media (min-width: map.get(b.$grid-breakpoints, lg)) {
+      content: "";
+    }
+  }
+
+  &::before {
+    background: url(../assets/images/bg-before/left.png) no-repeat center;
+    left: -5px;
+  }
+
+  &::after {
+    background: url(../assets/images/bg-before/right.png) no-repeat center;
+    right: 0;
+  }
+
+  &__description {
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+  .partners-tnl {
+    &__partners {
+      justify-content: center;
+      padding: 40px 0;
+      @media (min-width: map.get(b.$grid-breakpoints, lg)) {
+        padding: 64px 0;
+      }
+      .partner {
+        background-color: var(--white);
+      }
+    }
+  }
+}
