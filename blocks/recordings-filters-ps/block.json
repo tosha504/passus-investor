@@ -1,0 +1,41 @@
+{
+  "name": "acf/recordings-filters-ps",
+  "title": "Nagrania z filtrowaniem blok PS",
+  "description": "A custom recordings-filters block.",
+  "style": [
+    "file:../../css-blocks/recordings-filters-ps.css"
+  ],
+  "category": "custom-layout-category",
+  "icon": "filter",
+  "keywords": [
+    "about",
+    "quote"
+  ],
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "recordings-filters-ps.php"
+  },
+  "align": "full",
+  "supports": {
+    "anchor": true,
+    "alignContent": false,
+    "color": {
+      "text": true,
+      "background": true,
+      "link": true
+    },
+    "alignText": true,
+    "spacing": {
+      "margin": [
+        "top",
+        "bottom"
+      ],
+      "padding": true
+    },
+    "typography": {
+      "lineHeight": true,
+      "fontSize": true
+    },
+    "fullHeight": true
+  }
+}

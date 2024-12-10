@@ -1,0 +1,178 @@
+@use "../sass/components/__breakpoints" as b;
+@use "sass:map";
+
+.recordings-filters-ps {
+  background-color: var(--grey5);
+  @for $i from 1 through 6 {
+    h#{7 - $i} {
+      text-align: center;
+    }
+  }
+
+  .technologies-list {
+    padding: 25px 0;
+    display: flex;
+    list-style: none;
+    gap: 32px 16px;
+    // flex-wrap: wrap;
+    justify-content: center;
+    @media (max-width: map.get(b.$grid-breakpoints, md)) {
+      overflow-x: auto;
+      width: 100%;
+      justify-content: start;
+      padding: 20px 0;
+    }
+    li {
+      a {
+        @media (max-width: map.get(b.$grid-breakpoints, md)) {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  &__items {
+    list-style: none;
+    padding: 50px 0 75px;
+    &_item {
+      background-color: var(--white);
+      overflow: hidden;
+      border-radius: 12px;
+      flex: 1 1 100%;
+      display: flex;
+      flex-direction: column;
+      // width: 100%;
+      border: 1px solid var(--grey5);
+      transition: 0.35s;
+
+      @media (min-width: map.get(b.$grid-breakpoints, md)) {
+        max-width: calc((100% / 2) - 15px);
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+      }
+
+      @media (min-width: map.get(b.$grid-breakpoints, lg)) {
+        max-width: calc((100% / 3) - 33px);
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          box-shadow: 8px 8px 24px -4px rgba(23, 23, 23, 0.08);
+          border: 1px solid transparent;
+          .recordings-ps__items_item-img {
+            img {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+
+      p {
+        color: var(--black);
+      }
+
+      &-img {
+        display: flex;
+        overflow: hidden;
+        max-width: 100%;
+        max-height: 100%;
+        height: 250px;
+        img {
+          transition: var(--transition);
+          object-fit: cover;
+        }
+      }
+      &-img,
+      .item-wrap {
+        flex: 1 1 100%;
+      }
+      .item-wrap {
+        display: flex;
+        flex-direction: column;
+        padding: 14px 12px;
+        @media (min-width: map.get(b.$grid-breakpoints, md)) {
+          padding: 28px 24px;
+        }
+
+        &__category {
+          font-size: 12px;
+          color: var(--passus-black-grey);
+        }
+
+        &__title {
+          flex: 1 1 100%;
+          margin: 10px 0 20px;
+          font-weight: 600;
+          font-size: clamp(18px, 1vw, 24px);
+        }
+
+        a {
+          color: var(--white);
+          display: flex;
+          margin-top: auto;
+          align-items: center;
+          gap: 8px;
+          max-width: 125px;
+          &::before {
+            content: "";
+            width: 12px;
+            height: 15px;
+            display: block;
+            background: url(../assets/images/icons/play.svg) no-repeat
+              center/cover;
+          }
+        }
+      }
+    }
+  }
+
+  .slick-dots {
+    bottom: 25px;
+    li {
+      background-color: var(--grey3);
+      &.slick-active {
+        background-color: var(--passus-black-grey);
+      }
+    }
+  }
+
+  .slick-arrow {
+    background-color: var(--white);
+    border: none;
+    width: 48px;
+    height: 48px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 2;
+    transition: 0.35s;
+    &.slick-disabled {
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .slick-prev {
+    background-image: url(../assets/images/icons/carusel-next.svg);
+    right: 65px;
+    @media (min-width: map.get(b.$grid-breakpoints, lg)) {
+      right: 89px;
+    }
+  }
+
+  .slick-next {
+    background-image: url(../assets/images/icons/carusel-left.svg);
+    right: 0;
+    @media (min-width: map.get(b.$grid-breakpoints, lg)) {
+      right: 24px;
+    }
+  }
+}

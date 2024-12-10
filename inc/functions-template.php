@@ -36,7 +36,7 @@ function display_all_technologies()
     $active_class = (is_post_type_archive()) ? 'primary' : 'outline';
     echo '<ul class="technologies-list">';
     echo '<li>';
-    echo '<a class="button button__' . esc_attr($active_class) . '" href="http://integrator-passus.local/partnerzy/">Wszyscy</a>';
+    echo '<a class="button button__' . esc_attr($active_class) . '" href="' . get_site_url() . '/partnerzy/">Wszyscy</a>';
     echo '</li>';
     foreach ($terms as $term) {
       $active_class = (is_tax('technologies', $term->term_id)) ? 'primary' : 'outline';

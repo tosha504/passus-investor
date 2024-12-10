@@ -47,6 +47,7 @@
         jQuery(this).parent().siblings('.menu-item-has-children.active').toggleClass("active");
       } else {
         jQuery(this).parent().removeClass("active");
+
       }
     });
   }

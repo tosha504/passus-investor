@@ -17,6 +17,7 @@
       display: flex;
       text-align: left;
       flex-direction: column;
+      text-align: center;
       align-items: center;
       border: 1px solid var(--grey3);
       flex: 1 1 100%;
@@ -48,6 +49,7 @@
         font-weight: 600;
         display: flex;
         align-items: center;
+        margin: 0 auto;
         gap: 8px;
         &::after {
           content: "";

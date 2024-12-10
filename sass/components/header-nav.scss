@@ -26,7 +26,7 @@
       }
       &.menu-item-has-children {
         a {
-          @media (max-width: map-get(b.$grid-breakpoints, xl)) {
+          @media (max-width: map.get(b.$grid-breakpoints, xl)) {
             display: flex;
             align-items: center;
             &::after {

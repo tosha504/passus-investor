@@ -68,6 +68,10 @@ function custom_block_theme_acf_enqueue_scripts()
 	if (has_block('acf/runline-ps', get_queried_object_id())) {
 		wp_enqueue_script('runline-ps', $theme_uri . "/blocks/runline-ps/runline-ps.js", array(), '1.0.0', true);
 	}
+
+	if (has_block('acf/recordings-filters-ps', get_queried_object_id())) {
+		wp_enqueue_script('recordings-filters-ps', $theme_uri . "/blocks/recordings-filters-ps/recordings-filters-ps.js", array(), '1.0.0', true);
+	}
 }
 add_action('wp_enqueue_scripts', 'custom_block_theme_acf_enqueue_scripts');
 add_action('admin_enqueue_scripts', 'custom_block_theme_acf_enqueue_scripts');

@@ -34,6 +34,7 @@
       > p {
         display: flex;
         flex-wrap: wrap;
+        align-items: flex-start;
         gap: 15px;
         @media (max-width: map.get(b.$grid-breakpoints, md)) {
           gap: 1px;
