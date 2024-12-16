@@ -18,11 +18,17 @@ $anchor = '';
 if (!empty($block['anchor'])) {
   $anchor = 'id="' . esc_attr($block['anchor']) . '" ';
 }
+$tag = get_field('tag');
+$text_title = get_field('text_title');
+$class_title = get_field('class_title');
+$font_weight = get_field('font-weight');
 $slider = get_field('sldier'); ?>
 <!-- slider-ps start -->
 <section class="slider-ps" <?php echo $anchor; ?>>
   <div class="container">
-    <?php if (!empty($slider) && count($slider) > 0) { ?>
+    <?php
+    show_title_and_btn($tag, $text_title, $class_title, $font_weight);
+    if (!empty($slider) && count($slider) > 0) { ?>
       <div class="slider-ps__slider">
         <?php foreach ($slider as $key => $slide) { ?>
           <div class="slider-ps__slider_slide"><?php echo $slide['content']; ?></div>

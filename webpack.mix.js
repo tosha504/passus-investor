@@ -43,7 +43,6 @@ mix
       ],
     },
   })
-  .js("src/index.js", "assets/js/index.js")
   .browserSync({
     proxy: "http://integrator-passus.local/",
     files: [`**/*.php`, `**/*.js`, `**/*.css`],

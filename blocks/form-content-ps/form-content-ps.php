@@ -24,15 +24,23 @@ $class_title = get_field('class_title');
 $font_weight = get_field('font-weight');
 $description = !empty(get_field('description')) ? "<div class='form-content-ps__left_description'>" . get_field('description') . "</div>" : "";
 $shortcode = get_field('shortcode');
-$background = !empty(get_field('background')) ? 'style="background-image: url(' . wp_get_attachment_url(get_field('background')) . ')"' : ''; ?>
+$background = !empty(get_field('background')) ? 'style="background-image: url(' . wp_get_attachment_url(get_field('background')) . ')"' : '';
+$kolor_pick = !empty(get_field('kolor_pick')) ? 'style="color:' . get_field('kolor_pick') . '"' : ''; ?>
 <!-- form-content-ps start -->
+<?php if (!empty($kolor_pick)) {
+  echo "<style>
+  .title-block-ps{
+    color: " . get_field('kolor_pick') . " ;
+  }
+  </style>";
+} ?>
 <section class="form-content-ps" <?php echo  $anchor . $background; ?>>
   <div class="container">
-    <div class="form-content-ps__left">
+    <div class="form-content-ps__left" <?php echo $kolor_pick ?>>
       <?php show_title_and_btn($tag, $text_title, $class_title, $font_weight);
       echo $description; ?>
     </div>
-    <div class="form-content-ps__right">
+    <div class="form-content-ps__right" <?php echo $kolor_pick ?>>
       <?php echo $shortcode; ?>
     </div>
   </div>

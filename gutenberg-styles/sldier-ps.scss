@@ -10,11 +10,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  .title-block-ps {
+    color: var(--white);
+    text-align: center;
+  }
   &__slider {
     padding: 120px 0;
-    @media (min-width: map.get(b.$grid-breakpoints, lg)) {
-      padding: 215px 0;
-    }
+
     &_slide {
       align-items: center;
       p {

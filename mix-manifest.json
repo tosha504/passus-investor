@@ -1,5 +1,5 @@
 {
-    "/assets/js/index.js": "/assets/js/index.js",
+    "/css-blocks/bg-content-breadcrumbs-ps.css": "/css-blocks/bg-content-breadcrumbs-ps.css",
     "/css-blocks/banner-technology-ps.css": "/css-blocks/banner-technology-ps.css",
     "/css-blocks/banner-ps.css": "/css-blocks/banner-ps.css",
     "/css-blocks/banner-datasheet-light-ps.css": "/css-blocks/banner-datasheet-light-ps.css",
@@ -32,6 +32,5 @@
     "/css-blocks/conferences-webinars-ps.css": "/css-blocks/conferences-webinars-ps.css",
     "/css-blocks/carousel-ps.css": "/css-blocks/carousel-ps.css",
     "/css-blocks/bg-content-newsletter-ps.css": "/css-blocks/bg-content-newsletter-ps.css",
-    "/css-blocks/bg-content-img-ps.css": "/css-blocks/bg-content-img-ps.css",
-    "/css-blocks/bg-content-breadcrumbs-ps.css": "/css-blocks/bg-content-breadcrumbs-ps.css"
+    "/css-blocks/bg-content-img-ps.css": "/css-blocks/bg-content-img-ps.css"
 }
