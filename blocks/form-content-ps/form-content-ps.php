@@ -29,7 +29,7 @@ $kolor_pick = !empty(get_field('kolor_pick')) ? 'style="color:' . get_field('kol
 <!-- form-content-ps start -->
 <?php if (!empty($kolor_pick)) {
   echo "<style>
-  .title-block-ps{
+  .form-content-ps .title-block-ps{
     color: " . get_field('kolor_pick') . " ;
   }
   </style>";
