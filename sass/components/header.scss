@@ -4,7 +4,28 @@
 @use "./header-nav";
 
 .header {
-  padding: 20px 0;
+  &__top {
+    padding: 5px 0;
+    background-color: var(--passus-red);
+    p {
+      font-size: 11px;
+      text-align: center;
+      margin: 0 auto;
+      color: var(--white);
+      a {
+        color: var(--black);
+        @media (hover: hover) {
+          &:hover {
+            color: var(--white);
+          }
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    padding: 10px 0 20px;
+  }
 
   ul {
     list-style: none;

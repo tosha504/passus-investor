@@ -29,33 +29,43 @@
 	<div id="page" class="wrapper">
 
 		<header id="masthead" class="header <?php echo is_front_page() ? 'dark' : 'light'; ?>">
-			<div class="container">
-				<?php
-				$logo = get_field('logo', 'options_header');
-				if ($logo) { ?>
-					<div class="header__logo">
-						<a href="<?php echo esc_url(home_url('/')) ?>">
-							<?php
-							echo wp_get_attachment_image($logo, 'full');
-							?>
-						</a>
+			<?php $belt_top = get_field('belt_top', 'options_header');
+			if (!empty($belt_top)) { ?>
+				<div class="header__top">
+					<div class="container">
+						<?php echo $belt_top; ?>
 					</div>
-				<?php } ?><!-- header-logo -->
-
-				<nav id="site-navigation" class="main-navigation">
+				</div>
+			<?php } ?>
+			<div class="header__bottom">
+				<div class="container">
 					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'menu-header',
-							'container' => false,
-							'menu_id' => 'primary-menu',
-							'menu_class' => 'header__nav',
-						),
-					);
-					?>
-				</nav><!-- #site-navigation -->
+					$logo = get_field('logo', 'options_header');
+					if ($logo) { ?>
+						<div class="header__logo">
+							<a href="<?php echo esc_url(home_url('/')) ?>">
+								<?php
+								echo wp_get_attachment_image($logo, 'full');
+								?>
+							</a>
+						</div>
+					<?php } ?><!-- header-logo -->
 
-				<button class="burger"
-					aria-label="Open the menu"><span></span><span></span><span></span></button><!-- burger -->
+					<nav id="site-navigation" class="main-navigation">
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'menu-header',
+								'container' => false,
+								'menu_id' => 'primary-menu',
+								'menu_class' => 'header__nav',
+							),
+						);
+						?>
+					</nav><!-- #site-navigation -->
+
+					<button class="burger"
+						aria-label="Open the menu"><span></span><span></span><span></span></button><!-- burger -->
+				</div>
 			</div>
 		</header><!-- #masthead -->
