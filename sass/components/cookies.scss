@@ -1,0 +1,49 @@
+@use "./_breakpoints" as b;
+@use "sass:map";
+.cookies {
+  display: none;
+  color: var(--white);
+  background: var(--passus-red);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 7;
+
+  &__flex {
+    display: flex;
+    font-size: 12px;
+    gap: 20px;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-around;
+    @media (min-width: map.get(b.$grid-breakpoints, md)) {
+      flex-wrap: wrap;
+    }
+    p {
+      font-size: 14px;
+      flex: 1 1 80%;
+      a {
+        color: var(--black);
+        &:hover {
+          color: var(--white);
+        }
+      }
+    }
+  }
+  &__btn {
+    color: var(--white);
+    background-color: var(--black);
+    padding: 11px 24px;
+    border-radius: 6px;
+    transition: var(--transition);
+    max-width: 150px;
+    @media (hover: hover) {
+      &:hover {
+        cursor: pointer;
+        background: var(--white);
+        color: var(--black);
+      }
+    }
+  }
+}

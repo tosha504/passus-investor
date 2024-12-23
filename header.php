@@ -30,8 +30,9 @@
 
 		<header id="masthead" class="header <?php echo is_front_page() ? 'dark' : 'light'; ?>">
 			<?php $belt_top = get_field('belt_top', 'options_header');
+			$background_color = !empty(get_field('background_color', 'options_header')) ? "style='background:" . get_field('background_color', 'options_header') . ";'" : "";
 			if (!empty($belt_top)) { ?>
-				<div class="header__top">
+				<div class="header__top" <?php echo $background_color; ?>>
 					<div class="container">
 						<?php echo $belt_top; ?>
 					</div>

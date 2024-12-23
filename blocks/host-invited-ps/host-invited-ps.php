@@ -20,12 +20,15 @@ if (!empty($block['anchor'])) {
 }
 
 $invited = get_field('invited');
+$invited_title = !empty(get_field('invited_title')) ? "<h3 class='invited'>" . get_field('invited_title') . "</h3>" : "";
+$host_title = !empty(get_field('host_title')) ? "<h3 class='host'>" . get_field('host_title') . "</h3>" : "";
+
 $host = get_field('host'); ?>
 <!-- host-invited-ps start -->
 <section class="host-invited-ps" <?php echo  $anchor; ?>>
   <div class="container">
-    <h3 class="host">Prowadzący:</h3>
     <?php
+    echo $host_title;
     if (!empty($host) && count($host) > 0) { ?>
       <ul class="host-invited-ps__items">
         <?php foreach ($host as $key => $item) { ?>
@@ -49,9 +52,9 @@ $host = get_field('host'); ?>
         <?php } ?>
       </ul>
     <?php } ?>
-    <h3 class="invited">Zaproszeni goście:</h3>
     <?php
     if (!empty($invited) && count($invited) > 0) { ?>
+      <?php echo $invited_title; ?>
       <ul class="host-invited-ps__items">
         <?php foreach ($invited as $key => $item) { ?>
           <li class="host-invited-ps__items_item item">

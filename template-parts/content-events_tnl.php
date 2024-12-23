@@ -24,11 +24,13 @@
 		$link = get_field('button'); ?>
 		<!-- banner-events-ps start -->
 		<section class="banner-events-ps" <?php echo $background; ?>>
-			<?php if (function_exists('yoast_breadcrumb')) {
-				echo '<div class="breadcrumbs-container container">';
-				yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
-				echo '</div>';
-			} ?>
+			<?php
+			//  if (function_exists('yoast_breadcrumb')) {
+			// 	echo '<div class="breadcrumbs-container container">';
+			// 	yoast_breadcrumb('<p id="breadcrumbs">', '</p>');
+			// 	echo '</div>';
+			// } 
+			?>
 			<div class="container">
 				<div class="banner-events-ps__content">
 					<?php show_title_and_btn($tag, $text_title, $class_title, $font_weight);

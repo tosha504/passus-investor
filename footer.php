@@ -77,6 +77,14 @@ $polices = get_field('polices', 'options_footer'); ?>
     </div>
   </div>
 </footer><!-- #colophon -->
+<div class="cookies">
+  <?php $cookies_ps = !empty(get_field('cookies_ps', 'options')) ? get_field('cookies_ps', 'options') : '  <p>Serwis używa informacji zapisanych za pomocą plików cookie oraz innych rozwiązań informatycznych, pozwalających na dostosowanie treści do potrzeb użytkownika oraz w celach statystycznych.. Jeżeli nie wyrażają Państwo zgody na ich zapisywanie, należy opuścić stronę lub zmienić w przeglądarce ustawienia dotyczące cookies. Szczegółowe informacje można znaleźć w naszej <a href="http://" target="_blank" rel="noopener noreferrer"> polityce cookies</a> .</p>'; ?>
+  <div class="container">
+    <div class="cookies__flex">
+      <?php echo $cookies_ps; ?>
+      <a href="javascript:;" class="cookies__btn btn submit">Akceptuję</a>
+    </div>
+  </div><!-- cookies -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

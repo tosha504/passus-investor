@@ -1,6 +1,7 @@
 @use "./__breakpoints" as b;
 @use "sass:map";
 @use "../pages/404-page" as page404;
+
 *,
 *::before,
 *::after {
@@ -102,4 +103,21 @@ textarea {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.wp-block-group {
+  margin: 50px auto;
+  p,
+  ul {
+    margin: 10px 0;
+  }
+
+  ul {
+    li {
+      margin-left: 20px;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
 }

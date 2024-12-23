@@ -49,9 +49,9 @@
       flex-wrap: wrap;
       p {
         flex: 1 1 100%;
-        @media (min-width: map.get(b.$grid-breakpoints, md)) {
-          flex: 1 1 auto;
-        }
+      }
+      a {
+        color: var(--passus-red);
       }
       .wpcf7-submit {
         border-radius: 11px;
@@ -63,6 +63,7 @@
         font-size: 14px;
         font-weight: 500;
         width: 100%;
+        max-width: 150px;
       }
     }
   }
