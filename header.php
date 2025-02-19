@@ -29,8 +29,8 @@
 	<div id="page" class="wrapper">
 
 		<header id="masthead" class="header <?php echo is_front_page() ? 'dark' : 'light'; ?>">
-			<?php $belt_top = get_field('belt_top', 'options_header');
-			$background_color = !empty(get_field('background_color', 'options_header')) ? "style='background:" . get_field('background_color', 'options_header') . ";'" : "";
+			<?php $belt_top = get_field('belt_top', 'options');
+			$background_color = !empty(get_field('background_color', 'options')) ? "style='background:" . get_field('background_color', 'options') . ";'" : "";
 			if (!empty($belt_top)) { ?>
 				<div class="header__top" <?php echo $background_color; ?>>
 					<div class="container">
@@ -41,7 +41,7 @@
 			<div class="header__bottom">
 				<div class="container">
 					<?php
-					$logo = get_field('logo', 'options_header');
+					$logo = get_field('logo', 'options');
 					if ($logo) { ?>
 						<div class="header__logo">
 							<a href="<?php echo esc_url(home_url('/')) ?>">

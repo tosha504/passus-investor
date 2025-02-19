@@ -187,7 +187,6 @@ if (function_exists('acf_add_options_page')) {
 		'page_title' => 'General settings',
 		'menu_title' => 'General settings',
 		'menu_slug' => 'theme-general-settings',
-		'post_id' => 'options',
 		'capability' => 'edit_posts',
 		'redirect' => false
 	]);
@@ -196,7 +195,6 @@ if (function_exists('acf_add_options_page')) {
 		'page_title' => 'Header settings',
 		'menu_title' => 'Header settings',
 		'menu_slug' => 'theme-header-settings',
-		'post_id' => 'options_header',
 		'capability' => 'edit_posts',
 		'icon_url' => 'dashicons-admin-settings',
 		'redirect' => false

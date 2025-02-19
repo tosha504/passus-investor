@@ -32,11 +32,14 @@ function display_all_technologies()
     'hide_empty' => true, // Set to true to hide terms with no posts
   ));
 
+
   if (!empty($terms) && !is_wp_error($terms)) {
+    $current_language = ICL_LANGUAGE_CODE;
+    $partners_url = ($current_language === 'pl') ? get_site_url() . '/partnerzy/' : get_site_url() . '/en/vendors/';
     $active_class = (is_post_type_archive()) ? 'primary' : 'outline';
     echo '<ul class="technologies-list">';
     echo '<li>';
-    echo '<a class="button button__' . esc_attr($active_class) . '" href="' . get_site_url() . '/partnerzy/">Wszyscy</a>';
+    echo '<a class="button button__' . esc_attr($active_class) . '" href="' . esc_url($partners_url) . '">' . __('All', 'passus') . '</a>';
     echo '</li>';
     foreach ($terms as $term) {
       $active_class = (is_tax('technologies', $term->term_id)) ? 'primary' : 'outline';

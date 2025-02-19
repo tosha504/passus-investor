@@ -10,7 +10,7 @@ defined('ABSPATH') || exit;
 function register_post_types()
 {
   register_post_type('partners_tnl', array(
-    'label' => 'Partnerzy technologiczni',
+    'label' => __('Partnerzy technologiczni', 'your-text-domain'),
     'public' => true,
     'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'custom-fields'),
     'rewrite' => array('slug' => 'partnerzy'),
