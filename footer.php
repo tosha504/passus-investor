@@ -44,7 +44,7 @@ $polices = get_field('polices', 'options_footer'); ?>
                     if ($group_item["link"]) {
                       $link_url = $group_item["link"]['url'];
                       $link_title = $group_item["link"]['title'];
-                      $link_target = $group_item["link"]['target'] ? $link['target'] : '_self'; ?>
+                      $link_target = $group_item["link"]['target'] ? $group_item["link"]['target'] : '_self'; ?>
                       <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
                         <?php print(!empty($group_item["icon"]) ? my_custom_attachment_image($group_item["icon"])  : "");
                         echo esc_html($link_title); ?></a>
@@ -82,7 +82,7 @@ $polices = get_field('polices', 'options_footer'); ?>
   <div class="container">
     <div class="cookies__flex">
       <?php echo $cookies_ps; ?>
-      <a href="javascript:;" class="cookies__btn btn submit">Akceptuję</a>
+      <a href="javascript:;" class="cookies__btn btn submit"><?php _e("Accept", "passus"); ?></a>
     </div>
   </div><!-- cookies -->
 </div><!-- #page -->
